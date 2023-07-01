@@ -17,36 +17,30 @@ export default function Projects(){
     };
 
     const LineMenu = ()=>{
+
         const Item = (props)=>{
             return(
                 <div className="item">
                     <div className="circle"></div>
-                    <a href="#">{props.name}</a>
+                    <a className="link" href="#">{props.name}</a>
                 </div>
             );
         };
+
         return(
-            <div class="menu">
+            <div className="menu">
                 <div className="line"></div>
-                    <nav>
-                    <Item name="papp" />
-                    <Item name="paap" />
-                    <Item name="pawp" />
-                    <Item name="pap" />
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Contact</a>
-                    <div class="animation start-home"></div>
-                    </nav>
+                <nav>
+                {projects.map((id)=>{return(<Item name={id} />);})}
+                <div className="animation start-home"></div>
+                </nav>
             </div>
         );
     };
 
     return(
         <div className="body">
-            {/* <Navbar /> */}
+            <Navbar />
             <img className="background" src={bg} />
             <Card />
             <LineMenu />
