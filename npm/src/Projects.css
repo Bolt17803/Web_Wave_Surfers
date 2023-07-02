@@ -27,16 +27,23 @@
 /* Command Prompt */
 h1{
     position: absolute;
-    top: 8%;
+    top: 12.5%;
     left: 12%;
     color: white;
     text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
     z-index: 10;
+
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px #FDF7F7;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 /* CARD */
 .card{
     position: relative;
-    top: 20%;
+    top: 10%;
     left: 30%;
     width: 56.7%;
     height: 64%;
@@ -58,7 +65,7 @@ h1{
 
     color: #FFF;
     text-align: center;
-    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    text-shadow: 0px 0px 5px 0px rgba(253, 244, 244, 0.90);
     font-size: 27px;
     font-style: normal;
     font-weight: 800;
@@ -120,7 +127,8 @@ h1{
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 .menu{
     position: absolute;
-    top: 10%;
+    top: 15%;
+    left: 2.5%;
     height: 440px;
 }
 .line{
@@ -155,6 +163,18 @@ h1{
     z-index: 10;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+.inner-circle{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 3.7px;
+    left: 3.8px;
+    border-radius: 50%;
+    background-color: #1F407EC9;
+    z-index: 11;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: none;
+}
 .item a{
     left:30px;
     display: flex;
@@ -172,6 +192,18 @@ h1{
 	display: flex;
     flex-direction: column;
 	text-align: center;
+}
+.base{
+	position: absolute;
+	border-radius: 15px;
+    background: linear-gradient(0deg, rgba(21, 41, 81, 0.20) 0%, rgba(21, 41, 81, 0.20) 100%), linear-gradient(173deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.10) 100%);
+    box-shadow: 0px 4px 50px 40px rgba(0, 0, 0, 0.23);
+    backdrop-filter: blur(25px);
+    z-index: 0;
+    width: 177px;
+    height: 53px;
+    flex-shrink: 0;
+	transition: all .5s ease 0s;
 }
 body{
 	font-family: 'Open Sans', sans-serif;
@@ -193,8 +225,9 @@ nav{
 	font-size: 0;
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 }
-nav .item a{
-
+nav .item:active .inner-circle{ /*Test Code remove in production*/
+        color: red;
+        display: block;
 }
 nav .animation{
 	position: absolute;
@@ -208,10 +241,14 @@ nav .animation{
     flex-shrink: 0;
 	transition: all .5s ease 0s;
 }
+nav .item .link:active{
+    color: white;
+    text-shadow: 0px 0px 2px #FDF7F7;
+}
 nav .item:nth-child(1){
     width: 100px;
 }
-nav .start-home, .item:nth-child(1):hover~.animation{
+nav .start-home, .item:nth-child(1):active~.animation{
 
 	width: 217px;
 	left: -26px;
@@ -220,15 +257,16 @@ nav .start-home, .item:nth-child(1):hover~.animation{
 nav .item :nth-child(2){
 	width: 110px;
 }
-nav .item:nth-child(2):hover~.animation{
+nav .item:nth-child(2):active~.animation{
 	width: 190px;
 	left: -26px;
     top: 13.9%;
+    animation-fill-mode: forwards;
 }
 nav .item:nth-child(3){
 	width: 100px;
 }
-nav .item:nth-child(3):hover~.animation{
+nav .item:nth-child(3):active~.animation{
 	width: 230px;
 	left: -26px;
     top: 29%;
@@ -236,7 +274,7 @@ nav .item:nth-child(3):hover~.animation{
 nav .item:nth-child(4){
 	width: 160px;
 }
-nav .item:nth-child(4):hover~.animation{
+nav .item:nth-child(4):active~.animation{
     width: 160px;
     left: -26px;
     top: 43.5%;
@@ -244,7 +282,7 @@ nav .item:nth-child(4):hover~.animation{
 nav .item:nth-child(5){
 	width: 120px;
 }
-nav .item:nth-child(5):hover~.animation{
+nav .item:nth-child(5):active~.animation{
 	width: 265px;
     left: -26px;
     top: 58.242%;
@@ -253,7 +291,7 @@ nav .item:nth-child(5):hover~.animation{
 nav .item:nth-child(6){
 	width: 120px;
 }
-nav .item:nth-child(6):hover~.animation{
+nav .item:nth-child(6):active~.animation{
 	width: 200px;
     left: -26px;
     top: 72.828%;
@@ -262,7 +300,7 @@ nav .item:nth-child(6):hover~.animation{
 nav .item:nth-child(7){
 	width: 120px;
 }
-nav .item:nth-child(7):hover~.animation{
+nav .item:nth-child(7):active~.animation{
 	width: 150px;
     left: -26px;
     top: 87.7142857143%;

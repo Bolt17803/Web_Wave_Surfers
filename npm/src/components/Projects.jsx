@@ -25,9 +25,11 @@ export default function Projects(){
 
         const Item = (props)=>{
             return(
-                <div className="item">
-                    <div className="circle"></div>
-                    <a className="link" href="#">{props.name}</a>
+                <div className="item" onClick={()=>{setProject(props.name)}}>
+                    <div className="circle">
+                        <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>
+                    </div>
+                    <a className="link" href="#">{props.name}</a><div className="base" style={{display: (props.name==project) ? "block" : "none"}}></div>
                 </div>
             );
         };
@@ -45,7 +47,7 @@ export default function Projects(){
 
     return(
         <div className="body">
-            {/* <Navbar /> */}
+            <Navbar />
             <h1>$ cd ~/ projects/ KSP</h1>
             <Card />
             <LineMenu />
