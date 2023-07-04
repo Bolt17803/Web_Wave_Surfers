@@ -35,7 +35,7 @@
     display: inline-block;
     width: 43vw;
     aspect-ratio: 2/1.4;
-    margin-left: 5vw;
+    margin-left: 6.5vw;
     margin-right: 8vw;
     /* margin-right: 5vw; */
     background: rgba(255, 255, 255, 0.17);
@@ -104,6 +104,7 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding-left: 40px;
     padding-top: 10px;
+    margin-bottom: 4vw;
 }
 
 .glass_card3 >p{

@@ -1,6 +1,7 @@
 import React from "react"
 import '../Community.css'
 import Navbar from './Navbar.jsx'
+import Footer from './Footer'
 import bg from '../assets/Magic_Pattern.png'
 import logo from '../assets/openlake_logo.png'
 
@@ -38,6 +39,7 @@ export default function Community(){
                     <p>PREVIOUS COORDINATORS :</p>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
