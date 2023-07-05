@@ -10,7 +10,7 @@ function App() {
     <>
 
      <BrowserRouter>
-     <Home/>
+     <Blogs/>
        <Routes>
          <Route exact path='/general' element={<Blogs apikey={App.apikey}/>}/>
        </Routes>
