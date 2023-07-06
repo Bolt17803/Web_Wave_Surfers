@@ -9,7 +9,7 @@ export default function Community(){
     return(
         <div className="body">
             <Navbar />
-            <p className="cd">$ cd community</p>
+            {/* <p className="cd">$ cd community</p>
             <div className="card_container1">
                 <div className="glass_card1">
                     <p>COORDINATORS :</p>
@@ -38,8 +38,8 @@ export default function Community(){
                 <div className="glass_card3">
                     <p>PREVIOUS COORDINATORS :</p>
                 </div>
-            </div>
-            <Footer />
+            </div> */}
+            {/* <Footer /> */}
         </div>
     )
 }

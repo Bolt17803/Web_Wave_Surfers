@@ -10,7 +10,7 @@ export default function Navbar(){
     return(
       <div className={`navContainer ${isMenuOpen ? 'show' : ''}`}>
         <div className={`nav ${isMenuOpen ? 'show' : ''}`}>
-            <img src="src/assets/Logo.png" alt="" id="logo"/>
+            <img src="src/assets/Logo.png" id="logo"/>
             <p className="openlake">OpenLake</p>
             <div className="nav_buttons">
                 <a className="projects">Projects</a>
