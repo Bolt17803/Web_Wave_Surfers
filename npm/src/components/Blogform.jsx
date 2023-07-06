@@ -52,51 +52,10 @@ const Blogform=({isVisible})=>{
                     <button type="submit">Upload</button></div>
                 </div>  
                 {uploaded && <p>File uploaded successfully!</p>}
-                {/* <div id="fileWrapper">
-                    <h3 className="uploaded">Uploaded Documents</h3>
-                    <div className="showfilebox">
-                        <div className="left">
-                            <span className="filetype">Pdf</span>
-                            <h3>Aks.pdf</h3>
-                        </div>
-                        <div className="right">
-                            <span>&#215;</span>
-                        </div>
-                    </div>
-                </div> */}
             </div>
 
 
-        // NOT WORKING 
-    //     <div className='form'>
-    //     <form  action="" onSubmit={handleSubmit}>
-    //     <input
-    //         type="file"
-    //         id="imageUpload"
-    //         accept=".jpg,.jpeg,.png"
-    //         onChange={handleFileChange} 
-    //         hidden
-    //       />
-    //       <label htmlFor="fileUpload">Choose an image for your blog:
-    //       <span><i className='fa fa-cloud-upload'></i></span>
-    //                <p>Click to Upload</p></label>
-    //       {selectedFile && <p>Selected File: {fileName}</p>}
-    //     </form>
-    //     <form>
-    //     <input
-    //         type="file"
-    //         id="contentUpload"
-    //         accept=".pdf,.doc,.docx"
-    //         onChange={handleFileChange} 
-    //       />
-    //     <label htmlFor="fileUpload">Choose the content for your blog:
-    //     <span><i className='fa fa-cloud-upload'></i></span>
-    //                <p>Click to Upload</p></label>
-    //       {selectedFile && <p>Selected File: {fileName}</p>}
-    //     </form>
-    //     <button id="uploadButton" type="submit">Upload</button>
-    //     {uploaded && <p>File uploaded successfully!</p>}
-    //   </div>
+       
     );
 }
 
