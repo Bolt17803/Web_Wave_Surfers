@@ -1,60 +1,43 @@
+
+
+@font-face{
+    font-family: 'JetBrains Mono';
+  src: url('src/assets/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
 .nav{
     margin: 0px 0px 0px 0px;
     position: relative;
-    display: flex;
-    padding-top: 5vw;
+    padding-top: 36px;
     padding-bottom: 15px;
+    z-index: 1;
+    background: transparent;
 }
 
-.nav_title{
-    display: flex;
-    margin-left: 4.5vw ;
-}
-
-.nav_logo{
-    height: 4vw;
-    width: 4vw;
-    display: inline-block;
-}
-
-.nav_title > p{
+#logo{
+    visibility: hidden;
+    width: 60px;
     margin-top: 0px;
-    margin-left: 2vw;
     margin-bottom: 0px;
-    display: inline-block;
-    color: #FFF;
-    text-shadow: 0px 0px 10px 0px rgba(253, 243, 243, 0.90);
-    font-size: 2.3vw;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 500
 }
 
-.nav_title >p:hover{
-    color: #fbfbf9;
-    text-shadow:0px 0px 30px #f9f9f6;
-    -moz-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-    cursor: pointer;
-}
-
-/* .nav > p{
+.nav > p{
     margin-top: 0px;
     margin-bottom: 0px;
     display: inline-block;
     color: #FFF;
     text-shadow: 0px 0px 10px 0px rgba(253, 243, 243, 0.90);
-    font-size: 2.3vw;
+    font-size: 2vw;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
-} */
+}
 .nav_buttons{
-    display: flex;
+    position: absolute;
+    display: inline-block;
     margin-left: 35vw;
     height: fit-content;
 }
-.nav_buttons > a{
+.nav_buttons > p{
     margin-top: 0px;
     margin-bottom: 0px;
     display: inline-block;
@@ -63,21 +46,26 @@
     font-size: 1.5vw;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
+    right: -8vw;
 }
 
-.nav_buttons >a:hover {
-    color: #fbfbf9;
-    text-shadow:0px 0px 30px #f9f9f6;
-    -moz-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
+.burgerMenu {
+    display: none;
+    background: none;
+    border: none;
+    /* font-size: 20px; */
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
 
+
+
+
 .openlake{
-    position: relative;
+    float: left;
+    /* position: sticky; */
     margin-left: 10vw;
+    /* top: 1px; */
 }
 
 .projects{
@@ -90,11 +78,254 @@
     margin-right: 20px;
 }
 
-.programs{
+.prog{
     position: relative;
     margin-right: 20px;
 }
 
 .community{
     position: relative;
+}
+
+@media (max-width:1000px){
+    .nav_buttons > p,.openlake p{
+        font-size:1.1rem;
+    }
+
+    .nav_buttons >p{
+        right: -1vw;
+    }
+
+    
+}
+
+@media (max-width:966px){
+    .nav_buttons{
+        right:1vw;
+        /* margin-left: 34vw; */
+    }
+}
+
+
+
+
+@media (max-width:780px){
+    #logo{
+        position: absolute;
+        visibility: visible;
+        top: 44%;
+    }
+
+    .openlake p{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:655px){
+    .nav{
+        display: none;
+    }
+
+    div {
+        -webkit-tap-highlight-color: transparent;
+        -moz-tap-highlight-color: transparent;
+        -ms-tap-highlight-color: transparent;
+        /* tap-highlight-color: transparent; */
+        -webkit-touch-callout: none;
+      }
+      
+    
+    .burgerMenu{
+        position: absolute;
+        display: block;
+        float: right;
+        right: 0vw;
+        top: -2vw;
+    }
+
+    .burgerMenu.open{
+        transform: rotate(90deg);
+    }
+
+    /* .burger-menu img{
+        width: 20px;
+    } */
+    
+
+    #logo{
+        width: 70px;
+        display: flex;
+        left: -35vw;
+        top: 0;
+    }
+
+    .openlake{
+        position: relative;
+        display: flex;
+        left: -33vw;
+        top: -15px;
+        font-size: 1.3rem !important;
+    }
+
+    .navContainer{
+        top: -15%;
+        transition: transform 0.3s ease;
+    }
+
+    .navContainer.show{
+        position:sticky;
+        z-index:3;
+        width: 100vw;
+        background: linear-gradient(180deg, #10244D 18.35%, #0896CD 100%);;
+        height: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+        top: 0;
+        transform: translateY(10px);
+    }
+
+    .nav.show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:10px 0;
+        opacity: 1;
+        /* justify-content: center; */
+    }
+
+
+
+
+    .nav_buttons p {
+        margin:37px 0;
+        cursor: pointer;
+        font-size: 1.3rem ;
+      }
+    
+    /* .nav_buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
+
+      /* .openlake {
+        display: none;
+        position: absolute;
+        padding-bottom: 50px;
+        font-size: 1.3rem;
+    } */
+}
+
+@media (max-width:557px){
+    .navContainer.show{
+        height:95vw;
+    }
+     
+    .nav_buttons p ,.openlake{
+        font-size: 1.1rem !important;
+    }
+
+    #logo{
+        left: -37vw;
+    }
+
+}
+
+@media (max-width:480px){
+    .burgerMenu{
+        width: 90px;
+    }
+
+    .openlake{
+        left: -30vw;
+    }
+}
+
+@media (max-width:462px){
+    .navContainer.show{
+        height:100vw;
+    }
+
+    #logo{
+        width: 58px;
+        left: -34vw;
+        top: 4%;
+    }
+
+}
+
+@media (max-width:444px){
+    .navContainer.show{
+        height:105vw;
+    }
+}
+
+@media (max-width:420px){
+    .navContainer.show{
+        height:110vw;
+    }
+}
+
+@media (max-width:385px){
+    .navContainer.show{
+        height:112vw;
+    }
+
+    .nav_buttons p{
+        font-size: 1rem;
+        margin: 34px 0;
+    }
+
+    .openlake{
+        visibility: hidden;
+    }
+}
+
+@media (max-width:369px){
+    .navContainer.show{
+        height:114vw;
+    }
+}
+
+@media (max-width:350px){
+    .navContainer.show{
+        height:116vw;
+    }
+
+    .nav_buttons p{margin: 30px 0;}
+
+    #logo{
+        left: -32vw;
+    }
+}
+
+@media (max-width:325px){
+    .navContainer.show{
+        height:118vw;
+    }
+
+    .nav_buttons p{margin: 27px 0;}
+}
+
+@media (max-width:303px){
+    .navContainer.show{
+        height:120vw;
+    }
+
+    .nav_buttons p{margin: 25px 0;}
+
+    #logo{
+        left: -30vw;
+    }
+}
+
+@media (max-width:280px){
+    .navContainer.show{
+        height:122vw;
+    }
+
+    .nav_buttons p{margin: 23px 0;}
 }
