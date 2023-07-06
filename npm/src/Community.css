@@ -1,0 +1,179 @@
+.body {
+    background-image: url('./assets/Community_bg.png');
+    /* background-color: aqua; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 100%s;
+}
+.cd {
+    display: flex;
+    width: 425px;
+    height: 26px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px 0px #FDF7F7;
+    font-size: 1.5vw;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    margin-left: 25vw;
+}
+
+.card_container1{
+    position: relative;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+.card_container2{
+    position: relative;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+.glass_card1 {
+    display: inline-block;
+    width: 43vw;
+    aspect-ratio: 2/1.4;
+    margin-left: 6.5vw;
+    margin-right: 8vw;
+    /* margin-right: 5vw; */
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* padding-left: 40px; */
+    padding-top: 10px;
+    margin-bottom: 7vw;
+}
+
+.glass_card1 >p{
+    color: #FFF;
+    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    font-size: 1.8vw;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    line-height: 12.5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 5vw;
+}
+
+.glass_card2 {
+    display: inline-block;
+    width: 30vw;
+    aspect-ratio: 1/1;
+    margin-right: 1vw;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 40px;
+    padding-top: 10px;
+    margin-bottom: 7vw;
+}
+
+.glass_card2 >p{
+    color: #FFF;
+    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    font-size: 1.8vw;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    line-height: 12.5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.glass_card3 {
+    display: inline-block;
+    width: 80vw     ;
+    height: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 40px;
+    padding-top: 10px;
+    margin-bottom: 4vw;
+}
+
+.glass_card3 >p{
+    color: #FFF;
+    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    font-size: 1.8vw;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    line-height: 12.5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative
+}
+
+/* card-1*/
+.logo1 {
+    width: 10vw;
+    height: 10vw;
+}
+.logo2{
+    width: 10vw;
+    height: 10vw;
+}
+.coordies{
+    display: flex;
+    width: 100%;
+}
+.person_one{
+    display: inline-block;
+    width: fit-content;
+    margin-left: 5vw;
+    margin-top: 2vw;
+    /* position: absolute; */
+}
+.person_one >h3{
+    font-size: 1.5vw;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px 0px #FDF7F7;
+    font-family: 'JetBrains Mono', monospace;
+}
+.person_two{
+    display: inline-block;
+    width: fit-content;
+    margin-left: 5vw;
+    /* position: absolute; */
+    /* left: 5vw; */
+}
+.person_two >h3{
+    font-size: 1.5vw;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px 0px #FDF7F7;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* members card */
+.member {
+    margin-top: 4vw;
+}
+.member > h3{
+    font-size: 1.5vw;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px 0px #FDF7F7;
+    font-family: 'JetBrains Mono', monospace;
+}
