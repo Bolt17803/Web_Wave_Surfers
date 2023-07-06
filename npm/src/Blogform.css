@@ -1,0 +1,624 @@
+@font-face{
+        font-family: 'JetBrains Mono';
+      src: url('src/assets/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    }
+
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.box{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25vw;
+        border-radius: 5px;
+        background: white;
+        border: 2px solid black;
+        height: 33vw;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 2px 2px 2px 2px rgb(104, 101, 101);
+}
+
+#closeBtn{
+        position: absolute;
+        top: 2%;
+        right: 1%;
+        width:2vw;
+}
+
+.upload-file{
+        /* position: absolute; */
+        /* display: flex;  */
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center !important;
+        /* margin-bottom: 20px; */
+        font-size: 1.2rem;
+        font-weight: 600;
+        top: 0;
+}
+
+.uploadLabel{
+        width: 21vw;
+        /* min-height: 100px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 3px dashed rgb(0, 157, 255);
+        cursor: pointer;
+        margin: 20px 0;
+}
+
+.uploadLabel span{
+        font-size: 60px;
+        color:rgb(0, 157, 255) ;
+}
+
+.uploadLabel p{
+        font-size: 0.8rem;
+        color:rgb(0, 157, 255) ;
+        font-weight: 600;
+        font-family: cursive;
+}
+
+
+
+.input-box{
+        margin: 1vw 0;
+}
+
+#uploadButton{
+        top: 87%;
+        left: 38%;
+        margin-bottom: 1vw;
+        position: absolute;
+        display: flex;
+        width: 6vw;
+        height: 3vw;
+        align-items: center;
+        justify-content: center;
+}
+
+
+#uploadButton button{
+        /* left: 2%; */
+        background: rgb(0, 157, 255);
+}
+
+.selected{
+       text-align: center;
+}
+
+.selected li{
+        color: black;
+        font-size: 0.8rem;
+        list-style: none;
+}
+
+.selected-files{
+        height: 1vw;
+}
+
+@media (max-width:1380px){
+        .box{
+                height: 35vw;
+        }
+}
+
+@media (max-width:1289px){
+        .box{
+                height: 37vw;
+        }
+}
+
+@media (max-width:1222px){
+        .box{
+                height: 39vw;
+        }
+}
+
+@media (max-width:1158px){
+        .box{
+                height: 41vw;
+        }
+}
+
+@media (max-width:1100px){
+        .box{
+                width: 30vw;
+                height: 42vw;
+        }
+}
+
+@media (max-width:1076px){
+        .box{
+                height: 44vw;
+        }
+}
+
+@media (max-width:1030px){
+        .box{
+                height: 45vw;
+        }
+}
+
+@media (max-width:1007px){
+        .box{
+                height: 47vw;
+        }
+}
+
+@media (max-width:960px){
+        .box{
+                width: 31vw;
+                height: 49vw;
+        }
+
+        #uploadButton{
+                left: 40%;
+        }
+}
+
+@media (max-width:925px){
+        .box{
+                height: 51vw;
+        }
+}
+
+@media (max-width:890px){
+        .box{
+                width: 33vw;
+                height: 53vw;
+        }
+
+        .uploadLabel{
+                width: 24vw;
+        }
+}
+
+@media (max-width:845px){
+        .box{
+                width: 35vw;
+                height: 55vw;
+        }
+
+        .uploadLabel{
+                width: 26vw;
+        }
+}
+
+@media (max-width:821px){
+        .box{
+                width: 38vw;
+                height: 57vw;
+        }
+
+        #uploadButton{
+                left: 42%;
+        }
+}
+
+@media (max-width:793px){
+        .box{
+                width: 40vw;
+                height: 59vw;
+        }
+}
+
+@media (max-width:760px){
+        .box{
+                width: 42vw;
+                height: 61vw;
+        }
+}
+
+@media (max-width:737px){
+        .box{
+                width: 42vw;
+                height: 63vw;
+        }
+
+        .uploadLabel{
+                width: 28vw;
+        }
+}
+
+@media (max-width:711px){
+        .box{
+                width: 44vw;
+                height: 65vw;
+        }
+}
+
+@media (max-width:693px){
+        .box{
+                height: 67vw;
+                width: 46vw;
+        }
+        .uploadLabel{
+                width: 32vw;
+        }
+}
+
+@media (max-width:668px){
+        .box{
+                height: 69vw;
+                width: 48vw;
+        }
+
+        #uploadButton{
+                left: 44%;
+        }
+}
+
+@media (max-width:653px){
+        .box{
+                height: 71vw;
+                width: 50vw;
+        }
+
+        .uploadLabel{
+                width: 34vw;
+        }
+}
+
+@media (max-width:630px){
+        .box{
+                height: 73vw;
+                width: 52vw;
+        }
+
+        .uploadLabel{
+                width: 36vw;
+        }
+}
+
+@media (max-width:611px){
+        .box{
+                height: 75vw;
+                width: 54vw;
+        }
+}
+
+@media (max-width:595px){
+        .box{
+                height: 77vw;
+        }
+}
+
+@media (max-width:580px){
+        .box{
+                height: 79vw;
+                width: 56vw;
+        }
+
+        .uploadLabel{
+                width: 38vw;
+        }
+}
+
+@media (max-width:567px){
+        .box{
+                height: 81vw;
+                width:58vw;
+        }
+}
+
+@media (max-width:550px){
+        .box{
+                width: 60vw;
+                height: 83vw;
+        }
+
+        .uploadLabel{
+                width: 40vw;
+        }
+}
+
+@media (max-width:540px){
+        .box{
+                width: 63vw;
+                height: 85vw;
+        }
+}
+
+@media (max-width:530px){
+        .box{
+                width: 61vw;
+                height: 87vw;
+        }
+}
+
+@media (max-width:514px){
+        .box{
+                /* width: 67vw; */
+                height: 89vw;
+        }
+}
+
+@media (max-width:500px){
+        .box{
+                height: 93vw;
+        }
+}
+
+@media (max-width:485px){
+        .box{
+                height: 95vw;
+        }
+
+        .selected li{
+                font-size: 0.7rem;
+        }
+}
+
+@media (max-width:470px){
+        .box{
+                height: 97vw;
+        }
+}
+
+@media (max-width:460px){
+        .box{
+                height: 99vw;
+        }
+
+}
+
+@media (max-width:450px){
+        .box{
+                height: 101vw;
+        }
+
+}
+
+@media (max-width:440px){
+        .box{
+                height: 103vw;
+        }
+
+        .selected li{
+                font-size: 0.6rem;
+        }
+}
+
+@media (max-width:430px){
+        .box{
+                height: 105vw;
+        }
+}
+
+@media (max-width:420px){
+        .box{
+                height: 109vw;
+        }
+}
+
+@media (max-width:400px){
+        .box{
+                height: 114vw;
+        }
+
+}
+
+@media (max-width:390px){
+        .box{
+                height: 116vw;
+        }
+       
+
+}
+
+@media (max-width:380px){
+        .box{
+                height: 125vw;
+        }
+
+}
+
+@media (max-width:370px){
+        .box{
+                height: 130vw;
+        }
+
+         .uploadLabel{
+               width: 42vw;
+        }
+
+        .selected li{
+                font-size: 0.5rem;
+        }
+}
+
+@media (max-width:360px){
+        .box{
+                height: 132vw;
+        }
+
+}
+
+@media (max-width:350px){
+        .box{
+                width: 67vw;
+                height: 136vw;
+        }
+
+        .uploadLabel{
+                width: 44vw;
+        }
+}
+
+@media (max-width:346px){
+        .box{
+                width: 70vw;
+                height: 145vw;
+        }
+
+}
+
+@media (max-width:340px){
+        .uploadLabel{
+                width: 45vw;
+        }
+
+        #uploadButton{
+                left: 46%;
+        }
+}
+
+@media (max-width:334px){
+        .box{
+                width: 73vw;
+                height: 150vw;
+        }
+
+        .uploadLabel{
+                width: 46vw;
+        }
+}
+
+@media (max-width:320px){
+        .box{
+                width: 73vw;
+                height: 155vw;
+                display: block;
+        }
+
+        .uploadLabel{
+                width: 50vw;
+        }
+
+        #uploadButton{
+                left: 47%;
+        }
+}
+
+@media (max-width:314px){
+        .box{
+                height: 160vw;
+        }
+}
+
+@media (max-width:306px){
+        .box{
+                height: 166vw;
+        }
+
+        .uploadLabel{
+                width: 53vw;
+        }
+}
+
+@media (max-width:290px){
+        .box{
+                width: 75vw;
+                height: 170vw;
+        }
+
+        .uploadLabel{
+                width: 47vw;
+        }
+}
+
+@media (max-width:285px){
+        .box{
+                width: 79vw;
+                height: 175vw;
+        }
+
+        .uploadLabel{
+                width: 55vw;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* REJECTED CSS */
+.left h3{
+        font-size: 18px;
+        margin: 0;
+}
+
+/* .wrapper{
+       
+        padding: 20px;
+        width: 100vw;
+        min-height: 100vh;
+        background: burlywood;
+} */
+
+.right span{
+        background:rgb(0, 157, 255) ;
+        color: white;
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        line-height: 25px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 50%;
+}
+
+
+
+.filetype{
+        background:rgb(0, 157, 255) ;
+        padding: 5px 15px;
+        text-transform: capitalize;
+        font-size: 20px;
+        color: white;
+        font-weight: 700;
+        border-radius: 3px;
+}
+
+.uploaded{
+        margin: 30px 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: azure;
+}
+
+/* 
+.showfilebox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding: 10px 15px;
+        box-shadow: rgb(57, 56, 56) 0px 0px 0px 1px,rgb(117, 112, 112) 0px 0px 0px 1px inset;
+} */
+
+/* .showfilebox .left{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+} */
+

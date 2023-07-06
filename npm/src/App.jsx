@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Blogs from './components/Blogs'
 import React from 'react'
 import { BrowserRouter ,Routes,Route} from 'react-router-dom';
+import Blogform from './components/Blogform';
 import Blogcard from './components/Blogcard';
 function App() {
   const apikey="83951c0e1b35448c95fd7924393c9e9a";

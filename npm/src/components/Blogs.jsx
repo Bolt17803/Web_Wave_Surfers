@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react'
 import Navbar from "./Navbar";
 import "../Blogs.css";
 import Blogcard from "./Blogcard";
+import Blogform from './Blogform';
 import PropTypes from 'prop-types'
 import App from '../App';
  const Blogs=(props) =>{
@@ -9,9 +10,15 @@ import App from '../App';
     const [page, setPage]=useState(1)
     const [totalResults, setTotalResults]=useState(0)
     const [searchedTitle,setSearchedTitle]=useState('');
+    const [isBoxVisible, setIsBoxVisible] = useState(false);
     // const [contents, setContents] = useState([]);
     const handleInputChange = (event) => {
       setSearchedTitle(event.target.value.toLowerCase());
+    };
+
+
+    const handleClick = () => {
+      setIsBoxVisible(!isBoxVisible);
     };
     
       const cap=props.category;
@@ -47,9 +54,10 @@ import App from '../App';
     
   const displayedContents = searchedTitle ? filteredContents : articles;
   return (
-  <div className="blogContainer">
+    
+  <div className='blogContainer'>
     <Navbar />
-    <div className="blogBackground"></div>
+    <div className='blogBackground'></div>
       <div className="light x1"></div>
       <div className="light x2"></div>
       <div className="light x3"></div>
@@ -59,15 +67,21 @@ import App from '../App';
       <div className="light x7"></div>
       <div className="light x8"></div>
       <div className="light x9"></div>
-      <p id="path">$cd~/Blogs/{props.category}</p>
+      <p id="path">$cd~/Blogs</p>
+      <div className="add-blog">
+      <img id='write'  style={{transform: isBoxVisible ? 'rotate(45deg)' : 'none'}} src="src/assets/plus.png" alt="" onClick={handleClick}/>
+      <Blogform isVisible={isBoxVisible}/>
+      <p className='new-blog'>Write Blog</p>
+      </div>
       <form action="" className="search-bar" method="get">
         <input type="text" placeholder="Search for blogs..." name="q" value={searchedTitle} onChange={handleInputChange}/>
         <button type="submit">
           <img src="src/assets/search.png" alt="" />{" "}
         </button>
       </form>
-      <div className="cardContainer">
-        <h1>OUR BLOGS</h1>
+      {/*  */}
+      <div  className={`cardContainer ${isBoxVisible ? 'blurred' : ''}`}>
+        <h2>OUR BLOGS</h2>
         <div className="cards">
             {displayedContents.map((element)=>{
                     return <div className="card-design" key={element.url}>
@@ -77,6 +91,7 @@ import App from '../App';
         </div>
       </div>
     </div>
+    
   );
 }
 
