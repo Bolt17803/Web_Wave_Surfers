@@ -12,7 +12,7 @@ export default function Navbar(){
             <div className="nav_buttons">
                 <a className="projects">Projects</a>
                 <a className="blog">Blog</a>
-                <a className="programs">Programs</a>
+                <a className="prog">Programs</a>
                 <a className="community">Community</a>
             </div>
         </div>
