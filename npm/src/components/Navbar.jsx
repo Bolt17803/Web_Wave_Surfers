@@ -13,10 +13,10 @@ export default function Navbar(){
             <img src="src/assets/Logo.png" alt="" id="logo"/>
             <p className="openlake">OpenLake</p>
             <div className="nav_buttons">
-                <p className="projects">Projects</p>
-                <p className="blog">Blog</p>
-                <p className="programs">Programs</p>
-                <p className="community">Community</p>
+                <a className="projects">Projects</a>
+                <a className="blog">Blog</a>
+                <a className="prog">Programs</a>
+                <a className="community">Community</a>
             </div>
         </div>
         {/* <div className="burger-menu"> */}
