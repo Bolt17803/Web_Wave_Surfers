@@ -1,13 +1,12 @@
-.body {
-    /* background-image: url('./assets/Community_bg.png'); */
-    /* background-color: aqua; */
+.back {
+    background-image: url('./assets/Community_bg.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     width: 100%;
 }
 .cd {
-    display: flex;
+    display: inline;
     width: 425px;
     height: 26px;
     flex-direction: column;

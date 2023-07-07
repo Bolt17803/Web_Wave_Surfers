@@ -1,0 +1,77 @@
+.projects1 {
+    display: block;
+    margin-right: 5px ;
+    cursor: pointer;
+    color: #fbfbf9;
+    text-shadow:0px 0px 10px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.projects1:hover{
+    color: #fbfbf9;
+    text-shadow:0px 0px 30px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+.blog1 {
+    display: block;
+    cursor: pointer;
+    color: #fbfbf9;
+    text-shadow:0px 0px 10px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.blog1:hover{
+    color: #fbfbf9;
+    text-shadow:0px 0px 30px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+.prog1 {
+    display: block;
+    cursor: pointer;
+    color: #fbfbf9;
+    text-shadow:0px 0px 10px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.prog1:hover{
+    color: #fbfbf9;
+    text-shadow:0px 0px 30px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+.community1 {
+    display: block;
+    cursor: pointer;
+    color: #fbfbf9;
+    text-shadow:0px 0px 10px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.communitys1:hover{
+    color: #fbfbf9;
+    text-shadow:0px 0px 30px #f9f9f6;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
