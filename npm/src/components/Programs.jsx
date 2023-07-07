@@ -1,5 +1,5 @@
 import React from "react";
-import '../Programs.css';
+// import '../Programs.css';
 import Navbar from "./Navbar";
 import fo_logo from "../assets/programs/foss_overflow.png";
 import react_logo from "../assets/programs/react.png";

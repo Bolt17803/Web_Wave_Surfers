@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import '../Projects.css';
+// import '../Projects.css';
 import Navbar from './Navbar.jsx';
 import bg from '../assets/projects_bg.png';
 import ac from '../assets/projects/activitytracker.png';

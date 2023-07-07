@@ -4,7 +4,6 @@ import "../Blogs.css";
 import Blogcard from "./Blogcard";
 import Blogform from './Blogform';
 import PropTypes from 'prop-types'
-import App from '../App';
  const Blogs=(props) =>{
     const [articles, setArticles]=useState([])
     const [page, setPage]=useState(1)
@@ -16,7 +15,25 @@ import App from '../App';
       setSearchedTitle(event.target.value.toLowerCase());
     };
 
+    const handleBackgroundClick = () => {
+      setIsBoxVisible(false);
+    };
+  /*Close the form on clicking the Esc or Del button */
+    useEffect(() => {
+      const handleKeyDown = (event) => {
+        if (event.keyCode === 27 ||event.keyCode === 46 ) { // 27 is the keycode for the Escape button
+          setIsBoxVisible(false);
+        }
+      };
 
+      window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []); 
+
+  /*Toggling function for box visibility*/
     const handleClick = () => {
       setIsBoxVisible(!isBoxVisible);
     };
@@ -48,6 +65,7 @@ import App from '../App';
       setTotalResults(parsedData.totalResults);
     };
 
+  /*Filter the blogs as per input given in input section*/
     const filteredContents = articles.filter((content) =>
     content.title.toLowerCase().includes(searchedTitle)
   );
@@ -70,7 +88,7 @@ import App from '../App';
       <p id="path">$cd~/Blogs</p>
       <div className="add-blog">
       <img id='write'  style={{transform: isBoxVisible ? 'rotate(45deg)' : 'none'}} src="src/assets/plus.png" alt="" onClick={handleClick}/>
-      <Blogform isVisible={isBoxVisible}/>
+      <Blogform onClick={handleClick} isVisible={isBoxVisible}/>
       <p className='new-blog'>Write Blog</p>
       </div>
       <form action="" className="search-bar" method="get">
@@ -80,7 +98,7 @@ import App from '../App';
         </button>
       </form>
       {/*  */}
-      <div  className={`cardContainer ${isBoxVisible ? 'blurred' : ''}`}>
+      <div  className={`cardContainer ${isBoxVisible ? 'blurred' : ''}`} onClick={handleBackgroundClick}>
         <h2>OUR BLOGS</h2>
         <div className="cards">
             {displayedContents.map((element)=>{

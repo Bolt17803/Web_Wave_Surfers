@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    background: blue;
+    /* background: blue; */
     background-image: url('assets/Home.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -259,102 +259,4 @@
     }
 }
 
-/*
-  
 
-
-
-@media (min-width:200px) and (max-width:414px) {
-    .wires-top img{
-        width: 10vw;
-        height: auto;
-    }
-
-    .wires-bottom img{
-        width: 10vw;
-        height: auto;
-    }
-    
-    .logo img{
-        top:25%;
-        width:60vw;
-        height:60vw;
-    }
-
-    .text{
-        top:70%;
-    }
-
-    .text p{
-        line-height:normal;
-    }
-    .homeContainer{
-        width: 112vw;
-        height: 113vh;
-    }
-
-}
-
-@media (min-width:414px) and (max-width:780px){
-    .logo img{
-        top:25%;
-    }
-
-    .text{
-        top:60%;
-    }
-}
-
-@media (max-width: 576px) {
-    .wires-top img{
-        width: 20vh;
-        height: auto;
-    }
-
-    .wires-bottom img{
-        width: 18vh;
-        height: auto;
-    }
-
-    .logo{
-        top:40%;
-    }
-
-    .homeContainer{
-        width: 112vw;
-        height: 113vh;
-    }
-
-  }
-
-
-  
-
-  
-
- 
-@media (min-width:579px) and (max-width:766px){
-    .wires-top img{
-        width: 23vh;
-        height: auto;
-    }
-    .wires-bottom img{
-        width: 23vh;
-        height: auto;
-    }
-    .text{
-        width: max-content;
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width:579px) and (max-width:700px){
-    .text{
-        font-size: 1rem;
-    }
-}
-
-@media (min-width:577px) and (max-width:770px){
-    
-}
- */
