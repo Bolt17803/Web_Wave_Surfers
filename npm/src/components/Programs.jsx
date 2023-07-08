@@ -31,7 +31,7 @@ export default function Programs(){
     };
 
     return(
-        <div className="body">
+        <div className="programs-body">
             <Navbar />
             <h1>$ cd  Programs/</h1>
             <h2>Program details...</h2>

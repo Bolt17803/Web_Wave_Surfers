@@ -9,6 +9,8 @@ export default function Projects(){
     var projects = ['ACTIVITY TRACKER','CANON FORCE','LEADERBOARD PRO','KSP','HOMEWORK SCHEDULER','PHOTO SHARING','CGPA'];
     
     const [project, setProject] = useState(projects[0]);
+    const [animTop, setAnimTop] = useState("0%");
+    const [animLeft, setAnimLeft] = useState("-26px");
 
     const Card = ()=>{
         return(
@@ -25,7 +27,7 @@ export default function Projects(){
 
         const Item = (props)=>{
             return(
-                <div className="item" onClick={()=>{setProject(props.name)}}>
+                <div className="item" onClick={()=>{setProject(props.name); setAnimTop("80%");}}>
                     <div className="circle">
                         <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>
                     </div>
@@ -39,7 +41,7 @@ export default function Projects(){
                 <div className="line"></div>
                 <nav>
                 {projects.map((id)=>{return(<Item name={id} />);})}
-                <div className="animation start-home"></div>
+                <div className="animation start-home" style={{backgroundColor:"Red",top:{animTop}, left:{animLeft}}}></div>
                 </nav>
             </div>
         );
