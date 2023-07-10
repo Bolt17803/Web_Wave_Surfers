@@ -1,4 +1,4 @@
-.body{
+.project-body{
     position: absolute;
 
     background: url("./assets/projects_bg.png") no-repeat center center fixed;
@@ -25,7 +25,7 @@
     z-index: 0;
 }
 /* Command Prompt */
-h1{
+.project-body>h1{
     position: absolute;
     top: 12.5%;
     left: 12%;
@@ -35,13 +35,13 @@ h1{
 
     color: #FBF2F2;
     text-shadow: 0px 0px 5px #FDF7F7;
-    font-size: 30px;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
-/* CARD */
-.card{
+/* project-card */
+.project-card{
     position: relative;
     top: 10%;
     left: 30%;
@@ -56,7 +56,7 @@ h1{
 
     overflow: hidden;
 }
-.card h3{
+.project-card h3{
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -76,7 +76,7 @@ h1{
     color: white;
     text-shadow: 0 0 3px white;
 }
-.card p{
+.project-card>p{
     position: absolute;
     width: 45%;
     top: 20%;
@@ -88,7 +88,7 @@ h1{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.card button{
+.project-card>button{
     all: unset; 
     position: absolute;
     top:85%;
@@ -106,7 +106,7 @@ h1{
     justify-content: center;
     align-content: center;
 }
-.card button a{
+.project-card>button>a{
     align-self: center;
     color: #FFF;
     text-align: center;
@@ -118,7 +118,7 @@ h1{
     text-transform: uppercase;
     text-decoration: none;
 }
-.card img{
+.project-card>img{
     position: absolute;
     top: 0px;
     left: 50%;
@@ -141,7 +141,7 @@ h1{
     flex-shrink: 0;
     z-index: 10;
 }
-.item{
+.line-item{
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -151,7 +151,7 @@ h1{
     flex: 0 0 auto; 
     z-index: 10;
 }
-.circle{
+.line-item > .circle{
     position: absolute;
     top: 8px;
     left: -13.5px;
@@ -163,7 +163,7 @@ h1{
     z-index: 10;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.inner-circle{
+.line-item > .inner-circle{
     position: absolute;
     height: 25px;
     width: 25px;
@@ -175,7 +175,7 @@ h1{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: none;
 }
-.item a{
+.line-item>a{
     left:30px;
     display: flex;
     flex-wrap: nowrap;
@@ -193,7 +193,7 @@ h1{
     flex-direction: column;
 	text-align: center;
 }
-.base{
+.line-item > .base{
 	position: absolute;
 	border-radius: 15px;
     background: linear-gradient(0deg, rgba(21, 41, 81, 0.20) 0%, rgba(21, 41, 81, 0.20) 100%), linear-gradient(173deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.10) 100%);
@@ -205,11 +205,7 @@ h1{
     flex-shrink: 0;
 	transition: all .5s ease 0s;
 }
-body{
-	font-family: 'Open Sans', sans-serif;
-	background: #2c3e50;
-}
-nav{
+.item-holder{
 	position: absolute;
     top:100px;
     left: 100px;
@@ -225,11 +221,13 @@ nav{
 	font-size: 0;
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 }
-nav .item:active .inner-circle{ /*Test Code remove in production*/
-        color: red;
-        display: block;
+.item-holder > .line-item > a{
+    margin: 0px;
+    padding: 0px;  
+    text-align: left;
 }
-nav .animation{
+/* 
+.item-holder .animation{
 	position: absolute;
 	border-radius: 15px;
     background: linear-gradient(0deg, rgba(21, 41, 81, 0.20) 0%, rgba(21, 41, 81, 0.20) 100%), linear-gradient(173deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.10) 100%);
@@ -239,69 +237,73 @@ nav .animation{
     width: 177px;
     height: 53px;
     flex-shrink: 0;
-	transition: all .5s ease 0s;
 }
-nav .item .link:active{
+.item-holder .line-item .link:active{
     color: white;
     text-shadow: 0px 0px 2px #FDF7F7;
 }
-nav .item:nth-child(1){
+.item-holder .line-item:nth-child(7){
     width: 100px;
 }
-nav .start-home, .item:nth-child(1):active~.animation{
+@keyframes p1 {
+    100%{
+	left: -26px;
+    transform: translateY(100%);
+    }
+}
+.item-holder .start-home, .line-item:nth-child(7):active~.animation{
 
 	width: 217px;
-	left: -26px;
-    top: 0%;
-}
-nav .item :nth-child(2){
+    animation: p1 0.3s ease-in;
+} */
+/* .item-holder .line-item :nth-child(2){
 	width: 110px;
 }
-nav .item:nth-child(2):active~.animation{
+.item-holder .line-item:nth-child(2):active~.animation{
 	width: 190px;
 	left: -26px;
     top: 13.9%;
     animation-fill-mode: forwards;
 }
-nav .item:nth-child(3){
+.item-holder .line-item:nth-child(3){
 	width: 100px;
 }
-nav .item:nth-child(3):active~.animation{
+.item-holder .line-item:nth-child(3):active~.animation{
 	width: 230px;
 	left: -26px;
     top: 29%;
 }
-nav .item:nth-child(4){
+.item-holder .line-item:nth-child(4){
 	width: 160px;
 }
-nav .item:nth-child(4):active~.animation{
+.item-holder .line-item:nth-child(4):active~.animation{
     width: 160px;
     left: -26px;
     top: 43.5%;
 }
-nav .item:nth-child(5){
+.item-holder .line-item:nth-child(5){
 	width: 120px;
 }
-nav .item:nth-child(5):active~.animation{
+.item-holder .line-item:nth-child(5):active~.animation{
 	width: 265px;
     left: -26px;
     top: 58.242%;
 }
 
-nav .item:nth-child(6){
+.item-holder .line-item:nth-child(6){
 	width: 120px;
 }
-nav .item:nth-child(6):active~.animation{
+.item-holder .line-item:nth-child(6):active~.animation{
 	width: 200px;
     left: -26px;
     top: 72.828%;
 }
 
-nav .item:nth-child(7){
+.item-holder .line-item:nth-child(7){
 	width: 120px;
 }
-nav .item:nth-child(7):active~.animation{
+.item-holder .line-item:nth-child(7):active~.animation{
 	width: 150px;
     left: -26px;
     top: 87.7142857143%;
-}
+} */
