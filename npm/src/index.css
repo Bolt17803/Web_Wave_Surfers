@@ -25,13 +25,8 @@ a:hover {
 
 body {
   margin: 0;
-<<<<<<< HEAD
-  place-items: center;
-  min-width: 320px;
-=======
   padding: 0;
   display: block;
->>>>>>> bee1c64f4c014d2d90d8e039977d1b6a3806d944
   min-height: 100vh;
 }
 

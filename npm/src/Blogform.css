@@ -7,7 +7,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
@@ -99,10 +99,9 @@
        text-align: center;
 }
 
-.selected li{
+.selected-files{
         color: black;
         font-size: 0.8rem;
-        list-style: none;
 }
 
 .selected-files{
@@ -113,6 +112,13 @@
         top: 70%;
         position: absolute;
         left: 4%;
+}
+
+.blog-content{
+        top: 35%;
+        position: absolute;
+        left: 4%;
+        width: 80vw;
 }
 
 .blog-tags{
@@ -133,16 +139,21 @@
         padding-left: 2px;
 }
 
-.blog-title label,.blog-tags label{
+.blog-title label,.blog-tags label,.blog-content label{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 1.3rem;
 }
 
+.blog-content label{
+        /* position: absolute; */
+        top: 50%;
+}
 
 #title,#tags{
         margin-left: 10px;
         width: 19vw;
         height: 30px;
+        font-size: 1rem;
 }
 
 @media (max-width:1405px){
@@ -461,7 +472,7 @@
                 height: 109vw;
         }
 
-        .selected li{
+        .selected-files{
                 font-size: 0.7rem;
         }
 }
@@ -500,7 +511,7 @@
                 height: 120vw;
         }
 
-        .selected li{
+        .selected-files{
                 font-size: 0.6rem;
         }
 }
@@ -559,7 +570,7 @@
                width: 42vw;
         }
 
-        .selected li{
+        .selected-files{
                 font-size: 0.5rem;
         }
 
