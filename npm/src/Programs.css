@@ -14,10 +14,10 @@
     width: 100%;
     height: 100%;
 }
-h1{
+.programs-body > h1{
     position: absolute;
-    top: 12.5%;
-    left: 18%;
+    top: 23%;
+    left: 20%;
     color: white;
     text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
     z-index: 10;
@@ -29,7 +29,7 @@ h1{
     font-weight: 500;
     line-height: normal;
 }
-h2{
+.programs-body > h2{
     position: relative;
     top:10%;
     height: 10%;
@@ -82,10 +82,14 @@ h2{
     align-content: center;
     justify-content: center;
 }
+.year-button-blend:hover{
+    background-color: #b9b9b9;
+    mix-blend-mode: color-burn;
+}
 .year-button h1{/*need to optimize XD*/
-    margin-top: 1%;
+    margin-top: 8%;
     margin-bottom: auto;
-    margin-left: -3%;
+    margin-left: 14%;
     margin-right: auto;
     line-height:100%;
     vertical-align:middle;
@@ -96,26 +100,37 @@ h2{
     font-size: 2vw;
 }
 /* CARD */
+.programs-container{
+    position: relative;
+    top:15%;
+    width: 100vw;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .programs{
+    position: absolute;
     margin: 0px;
     padding: 0px;
     border: 0px;
-    top: 16%;
+    width: 80%;
     display: grid;
+
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
     grid-column-gap: 10px;
 
 }
-.card{
+.programs > .card{
     border: 0px;    
     top: 0px;
     left: 0px;
     width: 30vw;
     height: 20vw;
 }
-.card h1{
+.programs > .card > h1{
     position: absolute;
     margin: 0px;
     top: 7%;
@@ -123,7 +138,7 @@ h2{
 
     font-size: 2vw;
 }
-.card h3{
+.programs > .card > h3{
     position: absolute;
     margin: 0px;
     bottom: 5%;
@@ -132,7 +147,7 @@ h2{
     text-align: center;
     font-size: 0.7vw;
 }
-.image{
+.programs > .card > .image{
     position: relative;
     left: 50%;
     width: 50%;
@@ -144,9 +159,13 @@ h2{
     justify-content: center;
 
 }
-.card img{
+.programs > .card > .image{
     position: absolute;
     top: 20%;
-    left: 20%;
-    width: 70%;
+    left: 60%;
+    width: 30%;
+}
+.programs > .card > .img{
+    background-color: red;
+    display: none;
 }
