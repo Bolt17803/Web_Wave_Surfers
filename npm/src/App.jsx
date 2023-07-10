@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { BrowserRouter ,Routes,Route} from 'react-router-dom';
-import Home from './components/home'
+import Home from './components/Home'
 import Blogs from './components/Blogs'
 import Blogcard from './components/Blogcard';
 import Community from './components/Community'

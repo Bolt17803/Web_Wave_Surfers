@@ -1,18 +1,22 @@
 import React from "react";
 import '../Home.css'
 import Navbar from "./Navbar";
+import wirelc from '../assets/Wire-left-corner.png';
+import wirerc from '../assets/Wire-right-corner.png';
+import logo from '../assets/Logo.png';
+
 export default function Home(){
     return(
             <div className="homeContainer">
                 <Navbar/>
             <div className="logo">
-                <img className="logo-image" src="src/assets/Logo.png" alt="Logo"/>
+                <img className="logo-image" src={logo} alt="Logo"/>
             </div>
         <div className="wires-top">
-            <img src="src/assets/Wire-left-corner.png" alt="wires"/>
+            <img src={wirelc} alt="wires"/>
         </div>
         <div className="wires-bottom">
-            <img src="src/assets/Wire-right-corner.png" alt="wires"/>
+            <img src={wirerc} alt="wires"/>
         </div>
     <div className="text">
         {/* <p>
