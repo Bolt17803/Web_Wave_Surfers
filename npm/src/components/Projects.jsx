@@ -37,7 +37,7 @@ export default function Projects(){
                     <div className="circle">
                         <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>
                     </div>
-                    <a className="link" href="#">{props.name}</a>
+                    <a className="link" href="https://github.com/OpenLake/Knowledge-Sharing-Platform">{props.name}</a>
                     {/* <div className="base" style={{display: (props.name==project) ? "block" : "none"}}></div> */}
                 </div>
             );
@@ -56,7 +56,7 @@ export default function Projects(){
                             height: '50px',
                             left: "-26px",
                             borderRadius: '15px',
-                            backgroundColor: 'green',
+                            backgroundColor: 'grey',
                         }}
                         animate={{
                             translateY: `${animY}%`,
@@ -75,7 +75,7 @@ export default function Projects(){
     return(
         <div className="project-body">
             <Navbar />
-            <h1>$ cd ~/ projects/ KSP</h1>
+            <h1>$ cd ~/ Projects/ KSP</h1>
             <Card />
             <LineMenu />
         </div>
