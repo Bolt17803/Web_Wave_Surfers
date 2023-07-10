@@ -10,14 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "d3-ease": "^3.0.1",
     "framer-motion": "^10.12.18",
-    "gaxios": "^5.1.3",
-    "googleapis": "^120.0.0",
-    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-google-drive-picker": "^1.2.2",
+    "react-move": "^6.5.0",
     "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
@@ -28,6 +25,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "vite": "^4.3.9"
+    "vite": "^4.4.2"
   }
 }

@@ -24,14 +24,14 @@ export default function Programs(){
                 <p>{props.description?props.description:''}</p>
                 <h3>CLICK TO KNOW MORE</h3>
                 <div className="image">
-                    <img src={props.image}></img>
+                    <img className="img" src={props.image}></img>
                 </div>
             </div>
         );
     };
 
     return(
-        <div className="body">
+        <div className="programs-body">
             <Navbar />
             <h1>$ cd  Programs/</h1>
             <h2>Program details...</h2>
@@ -41,9 +41,11 @@ export default function Programs(){
                 <YearButton year={2022} />
                 <YearButton year={2023} />
             </div>
-            <div className="programs">
-                <Card name={"Foss Overflow :"} image={fo_logo}/>
-                <Card name={"React Bootcamp :"} image={react_logo}/>
+            <div className="programs-container">
+                <div className="programs">
+                    <Card name={"Foss Overflow :"} image={fo_logo}/>
+                    <Card name={"React Bootcamp :"} image={react_logo}/>
+                </div>
             </div>
         </div>
     );
