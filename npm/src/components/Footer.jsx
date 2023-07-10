@@ -4,6 +4,7 @@ import logo from '../assets/openlake_logo.png'
 import github from '../assets/github_logo.png'
 import { useState } from 'react'
 
+
 export default function Footer(){
 
     const [data, setData] = useState({

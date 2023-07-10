@@ -2,12 +2,12 @@ import React, {useState } from 'react';
 import '../Blogcard.css'
 const Blogcard = (props) => {
   const [cards, setCards] = useState([]);
-  let { title, description, imageUrl, newsUrl, author, date, source } = props;
+  let { title, tags } = props;
   return (
     <div className="card">
-      <div className='card-image'><img src={imageUrl} alt="..." /></div>
+      <div className='card-image'><img src="" alt="..." /></div>
       <div className="card-title"><h5>{title}{" "}</h5></div>
-        <div className="description"><p>{description}</p></div>
+        <div className="description"><p>{tags}</p></div>
       <button className='navigate'>Read More</button>
 
         {/* <p>

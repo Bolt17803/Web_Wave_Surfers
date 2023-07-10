@@ -1,13 +1,16 @@
 import React from "react";
 import '../Home.css'
 import Navbar from "./Navbar";
+import TypingEffect from "./TypingEffect";
+import {motion} from 'framer-motion'
 import wirelc from '../assets/Wire-left-corner.png';
 import wirerc from '../assets/Wire-right-corner.png';
 import logo from '../assets/Logo.png';
 
 export default function Home(){
+    const textToAnimate = '<p>We are the open source community of IIT BHILAI</p> <p>Connecting students to the world of Open Source development</p>';
     return(
-            <div className="homeContainer">
+            <motion.div className="homeContainer">
                 <Navbar/>
             <div className="logo">
                 <img className="logo-image" src={logo} alt="Logo"/>
@@ -24,10 +27,9 @@ export default function Home(){
            <span class="wrap"></span>
             </a>
         </p> */}
-    <p>We are the open source community of IIT BHILAI</p>
-        <p>Connecting students to the world of Open Source development</p>
+        <TypingEffect htmlContent={textToAnimate} />
     </div>
         
-    </div>
+    </motion.div>
     )
 }

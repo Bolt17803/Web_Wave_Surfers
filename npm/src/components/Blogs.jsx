@@ -1,8 +1,10 @@
-import React, {useEffect,useState} from 'react'
+import React, {useEffect,useState,useContext} from 'react'
 import Navbar from "./Navbar";
 import "../Blogs.css";
 import Blogcard from "./Blogcard";
 import Blogform from './Blogform';
+import Footer from './Footer';
+import BlogsContext from '../contexts/blogContext'
 import PropTypes from 'prop-types'
  const Blogs=(props) =>{
     const [articles, setArticles]=useState([])
@@ -10,6 +12,7 @@ import PropTypes from 'prop-types'
     const [totalResults, setTotalResults]=useState(0)
     const [searchedTitle,setSearchedTitle]=useState('');
     const [isBoxVisible, setIsBoxVisible] = useState(false);
+    const {data} = useContext(BlogsContext);
     // const [contents, setContents] = useState([]);
     const handleInputChange = (event) => {
       setSearchedTitle(event.target.value.toLowerCase());
@@ -25,17 +28,25 @@ import PropTypes from 'prop-types'
           setIsBoxVisible(false);
         }
       };
+      const handleKeyPress=(event)=>{
+        if(event.key === 'Escape' && isBoxVisible==false){
+          window.history.back();
+        }
+      }
 
       window.addEventListener('keydown', handleKeyDown);
+      window.addEventListener('keydown', handleKeyPress);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      window.addEventListener('keydown', handleKeyPress);
     };
   }, []); 
 
   /*Toggling function for box visibility*/
     const handleClick = () => {
       setIsBoxVisible(!isBoxVisible);
+      console.log('hello world');
     };
     
       const cap=props.category;
@@ -57,7 +68,7 @@ import PropTypes from 'prop-types'
 
        const fetchMoreData = async() => {
         console.log("cdm")
-        const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page+1}&pageSize=${props.pageSize}`;
+        const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page+1}&pageSize=${props.pageSize+1}`;
         setPage(page+1);
         let data = await fetch(url); //fetch API returns a promise
         let parsedData= await data.json()
@@ -103,11 +114,15 @@ import PropTypes from 'prop-types'
         <div className="cards">
             {displayedContents.map((element)=>{
                     return <div className="card-design" key={element.url}>
-                    <Blogcard  title={element.title?element.title:""} description={element.description?element.description.slice(0,88)+"....":""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
+                    <Blogcard  title={element.Title?element.Title:""} tags={element.Tags?element.Tags.slice(0,88)+"....":""} />
+                    {/* imageUrl={element.urlToImage} */}
                     </div>
             })}
         </div>
       </div>
+      <div className="footer">
+          <Footer/>
+        </div>
     </div>
     
   );

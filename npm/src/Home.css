@@ -17,14 +17,17 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+   transition: all 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 .logo-image:hover{
-    border-radius: 50%;
+    border-radius: 100%;
     /* border:6px solid #333; */
     background: rgba(92, 91, 166, 0.719);
 	box-shadow: 0px 0px 20px 0 rgb(255, 255, 255);
     backdrop-filter: blur(20px);
+    color: #fbfbf9;
+    box-shadow:0px 0px 30px #f9f9f6;
     /* color: white; */
 }
 

@@ -1,31 +1,100 @@
-import React,{useContext, useState} from 'react'
+import React,{useContext, useState,useEffect} from 'react'
 import '../Blogform.css'
+import Blogcard from './Blogcard';
+import X from '../assets/x-mark.png'
+import axios from 'axios';
+import Blogs from './Blogs';
+import BlogdataProvider from './BlogdataProvider'
+// import blogContext from '../contexts/blogContext';
+import DrivePicker from 'react-google-drive-picker'
+
 const Blogform=({isVisible,onClick})=>{
-    const [form1, setForm1] = useState([]);
-    const [form2, setForm2] = useState([]);
+    // const [content, setContent] = useState([]);
+    // const [image, setImage] = useState([]);
     const [uploaded, setUploaded] = useState(false);
+    const [image, setImage] = useState(null);
+    const [content,setContent] = useState(null);
+    const [title, setTitle] = useState('');
+    const [tags, setTag] = useState('');
+    const [openPicker,data,authResponse]= DrivePicker()
+    // const [formData, setFormData] = useState({});
+    const [sheetData, setSheetData] = useState([]);
+
+    // const handleOpenPicker=()=>{
+    //     openPicker({
+    //         clientId: "",
+    //         developerKey: "",
+    //         viewId: "DOCS",
+    //         showUploadView: true,
+    //         showUploadFolders: true,
+    //         supportDrives: true,
+    //         multiselect:true
+    //     })
+    // }
+
     const contentChange = (event) => {
-        setForm1(Array.from(event.target.files));
+        setContent(event.target.files[0]);
       };
     
       const imageChange = (event) => {
-        setForm2(Array.from(event.target.files));
+        setImage(event.target.files[0]);
       };
+    
+    const titleChange=(event)=>{
+        setTitle(event.target.value)
+    }
 
-      const toggle=(isVisible)=>{
-        isVisible=!isVisible;
-      }
+    const tagsChange=(event)=>{
+        setTag(event.target.value)
+    }
 
       const handleClick=()=>{
         onClick();
       }
+
    
       const handleSubmit = async (event) => {
-        /*Code to do POST request on clicking the submit button*/
-      };
+        event.preventDefault();
+            fetch('https://sheetdb.io/api/v1/5t4vzczfual72', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            data: [
+                {
+                    'Title': `${title}`,
+                    'Tags': `${tags}`
+                }
+            ]
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data) {
+                setSheetData(data);
+                console.log(sheetData);
+              }
+        });
+        setUploaded(true);
+  }
+
+        useEffect(() => {
+            if (sheetData.length > 0) {
+            console.log('sheetData:', sheetData);
+            }
+        }, [sheetData]);
+
+        // const formData={
+        //     title:`${title}`,
+        //     tags:`${tags}`,
+        // };
+
+    
     return(
             <div style={{display: isVisible ? 'flex' : 'none'}} className="box">
-                <img id="closeBtn" src="src/assets/x-mark.png" alt="" onClick={handleClick}/>
+                <img id="closeBtn" src={X} alt="" onClick={handleClick}/>
                 <div className="input-box">
                     <h2 className="upload-file">Upload Files</h2>
                     <form action="">
@@ -35,12 +104,7 @@ const Blogform=({isVisible,onClick})=>{
                             <p>Click to Upload content</p>
                         </label>
                     <div className="selected-files">
-                                {form1.length > 0 && (
-                        <ul className='selected'>
-                            {form1.map((file, index) => (
-                            <li key={index}>{file.name.slice(0,34)+'...'}</li>
-                            ))}
-                        </ul>)}
+                        {content && content.name.slice(0,34)+'...'}
                     </div>
                         <input type="file" accept='.jpg,.jpeg,.png' id='imageUpload'  onChange={imageChange} hidden/>
                         <label htmlFor="imageUpload" className='uploadLabel'>
@@ -48,26 +112,28 @@ const Blogform=({isVisible,onClick})=>{
                             <p>Click to Upload image</p>
                         </label>
                     <div className="selected-files">
-                        {form2.length > 0 && (
-                        <ul className='selected'>
-                            {form2.map((file, index) => (
-                            <li key={index}>{file.name.slice(0,34)+'...'}</li>
-                            ))}
-                        </ul>)}
+                           {image && image.name.slice(0,34)+'...'}
                      </div>
+
+                    {/* <div className="blog-content">
+                        <label htmlFor="">Content</label>
+                        <textarea name="content" id="content" onChange={contentChange} placeholder='<Write your content...../>'></textarea>
+                    </div> */}
+
                      <div className="blog-title">
                         <label htmlFor="">Title</label>
-                        <input type="text" id="title" name="title" placeholder="Enter the title"/>
+                        <input type="text" id="title" name="title" placeholder="Enter the title" onChange={titleChange} style={{color:'black'}}/>
                     </div>
                     <div className="blog-tags">
                         <label htmlFor="">Tags</label>
-                        <input type="text" id="tags" name="tags" placeholder="Enter the tags"/>
+                        <input type="text" id="tags" name="tags" placeholder="Enter the tags" onChange={tagsChange} style={{color:'black'}}/>
                     </div>
                     </form>
                 <div id="uploadButton">
-                    <button type="submit">Upload</button></div>
+                    <button type="submit" onClick={handleSubmit}>Upload</button></div>
                 </div>  
-                {uploaded && <p>File uploaded successfully!</p>}
+                {uploaded && <p style={{color:'white'}}>File uploaded successfully!</p>}
+                    <BlogdataProvider sheetData={sheetData}/>
             </div>
     );
 }
