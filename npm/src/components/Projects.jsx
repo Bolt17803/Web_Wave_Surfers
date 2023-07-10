@@ -20,7 +20,7 @@ export default function Projects(){
             <div className="project-card">
                 <h3>{project}</h3>
                 <p>Knowledge sharing platform application aims to get the students acquainted with the courses, professors, evaluation schemes. The said things can be achieved via gathering course feedback, professor feedback, and previous year grading schemes. This can be done by making a portal (just like a blog site) where people can share their honest reviews without being scrutinized much.</p>
-                <button type="button"><a href="#">VIEW SOURCE CODE</a></button>
+                <button type="button"><a href="https://github.com/OpenLake/Knowledge-Sharing-Platform">VIEW SOURCE CODE</a></button>
                 <img src={ac}></img>
             </div>
         );
@@ -37,7 +37,7 @@ export default function Projects(){
                     <div className="circle">
                         <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>
                     </div>
-                    <a className="link" href="https://github.com/OpenLake/Knowledge-Sharing-Platform">{props.name}</a>
+                    <a className="link" href="#">{props.name}</a>
                     {/* <div className="base" style={{display: (props.name==project) ? "block" : "none"}}></div> */}
                 </div>
             );
@@ -56,7 +56,7 @@ export default function Projects(){
                             height: '50px',
                             left: "-26px",
                             borderRadius: '15px',
-                            backgroundColor: 'grey',
+                            backgroundColor: 'blue',
                         }}
                         animate={{
                             translateY: `${animY}%`,
