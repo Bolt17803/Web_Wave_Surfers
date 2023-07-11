@@ -3,7 +3,8 @@ import { Link } from "react-router-dom"
 import '../Navbar.css'
 import logo from '../assets/openlake_logo.png'
 import burger_menu from "../assets/Burger-menu.png"
-import Mobile_nav from "./Mobilenav.jsx"
+import * as imIcons from 'react-icons/im'
+import * as bsIcons from 'react-icons/bs'
 
 export default function Navbar(){
 
@@ -26,9 +27,16 @@ export default function Navbar(){
           <img src={burger_menu} onClick={() => setIsMenuOpen(!isMenuOpen)} /> 
         </div>
       </div>
-      <div>
-      { isMenuOpen && <Mobile_nav />}
-      </div>
+      { isMenuOpen && <div className="mobile_nav">
+        <bsIcons.BsXSquare className='close_button' onClick={() => {setIsMenuOpen(!isMenuOpen)}} />
+        <Link to="/projects" className="projects1">Projects</Link>
+        <Link to="/blog" className="blog1">Blog</Link>
+        <Link to="/programs" className="prog1">Programs</Link>
+        <Link to="/community" className="community1">Community</Link>
+        <a gref="https://www.linkedin.com/company/openlake/?originalSubdomain=in" > <imIcons.ImLinkedin className="linkedin1" /> </a>
+        <a href="https://github.com/OpenLake" > <bsIcons.BsGithub className="github1" /> </a>
+        < a href="https://www.instagram.com/openlake_iitbhilai/" > <bsIcons.BsInstagram className="instagram1"/></a>
+      </div> }
       </div>
   )
 }
