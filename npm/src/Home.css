@@ -88,7 +88,7 @@
 
 @media (max-width: 1026px) {
     .wires-top img{
-        width: 17vw;
+        width: 25vw;
         height: auto;
     }
 
@@ -117,7 +117,7 @@
 
   @media (max-width:920px){
     .logo img{
-        top:30%;
+        top:35%;
     }
 
     .text{
@@ -126,13 +126,6 @@
     }
   }
 
-
-  @media (max-width:832px){
-    .wires-top img{
-        width: 20vw;
-        height: auto;
-    }
-  }
 
   @media (max-width:780px){
     .text{
@@ -143,10 +136,6 @@
         height: auto;
     }
 
-    .wires-top img{
-        width: 23vw;
-        height: auto;
-    }
   }
 
   @media (max-width:675px){
@@ -155,10 +144,6 @@
         height: auto;
     }
 
-    .wires-top img{
-        width: 25vw;
-        height: auto;
-    }
   }
 
   @media (max-width:655px){
@@ -218,6 +203,10 @@
         width: 38vw;
         height: auto;
     }
+    .wires-bottom img{
+        width:30vw;
+        height: auto;
+    }
   }
 
   @media (max-width:367px){
@@ -233,11 +222,6 @@
   }
 
   @media (max-width:337px){
-    .wires-bottom img{
-        width: 30vw;
-        height: auto;
-    }
-
     .wires-top img{
         width: 40vw;
         height: auto;
