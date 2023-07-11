@@ -21,10 +21,64 @@
 
 .card_container1{
     position: relative;
-    display: flex;
+    display:flex;
     height: fit-content;
     width: 100%;
 }
+@media(max-width: 900px) {
+    .card_container1 {
+        flex-direction: column;
+    }
+    .card_container1 >.glass_card1{
+        width: 80vw;
+        aspect-ratio: 2.7/1.4;
+        margin-left: 9vw;
+        padding-top: 5vw;
+    }
+    .card_container1 >.glass_card1> p {
+        font-size: 5vw;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_one{
+        margin-top: 5vw;
+        margin-left: 15vw;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_one> .logo1{
+        height: 15vw;
+        width: 15vw;
+        margin-bottom: 2vw;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_one> h3{
+        font-size: 2vw;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_two{
+        margin-top: 5vw;
+        margin-left: 15vw;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_two> .logo2{
+        height: 15vw;
+        width: 15vw;
+        margin-bottom: 2vw ;
+    }
+    .card_container1 >.glass_card1> .coordie_card> .person_two> h3{
+        font-size: 2vw;
+    }
+    .card_container1 >.glass_card2{
+        width: 80vw;
+        aspect-ratio: 3/1.4;
+        margin-left: 9vw;
+        padding-top: 5vw;
+    }
+    .card_container1 >.glass_card2> p {
+        font-size: 5vw;
+    }
+    .card_container1 >.glass_card2 >.member >h3 {
+        font-size: 3vw;
+    }
+    .card_container2 >.glass_card3{
+        margin-left: 8vw;
+    }
+}
+
 .card_container2{
     position: relative;
     display: flex;
@@ -35,7 +89,7 @@
     display: inline-block;
     width: 43vw;
     aspect-ratio: 2/1.4;
-    margin-left: 6.5vw;
+    margin-left: 8vw;
     margin-right: 8vw;
     /* margin-right: 5vw; */
     background: rgba(255, 255, 255, 0.17);
@@ -44,8 +98,7 @@
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    /* padding-left: 40px; */
-    padding-top: 10px;
+    padding-top: 3vw;
     margin-bottom: 7vw;
 }
 
@@ -74,7 +127,7 @@
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding-left: 40px;
-    padding-top: 10px;
+    padding-top: 3vw;
     margin-bottom: 7vw;
 }
 
@@ -94,7 +147,7 @@
     display: inline-block;
     width: 80vw     ;
     height: 20vw;
-    margin-left: 5vw;
+    margin-left: 7.5vw;
     margin-right: 5vw;
     background: rgba(255, 255, 255, 0.17);
     border-radius: 16px;
@@ -123,10 +176,12 @@
 .logo1 {
     width: 10vw;
     height: 10vw;
+    margin-bottom: 2vw;
 }
 .logo2{
     width: 10vw;
     height: 10vw;
+    margin-bottom: 2vw;
 }
 .coordies{
     display: flex;
@@ -136,7 +191,7 @@
     display: inline-block;
     width: fit-content;
     margin-left: 5vw;
-    margin-top: 2vw;
+    margin-top: 4vw;
     /* position: absolute; */
 }
 .person_one >h3{

@@ -23,8 +23,7 @@ export default function Navbar(){
           <Link to="/community" className="community">Community</Link>
         </div>
         <div className="hamburger">
-          <img src={burger_menu} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-          
+          <img src={burger_menu} onClick={() => setIsMenuOpen(!isMenuOpen)} /> 
         </div>
       </div>
       <div>

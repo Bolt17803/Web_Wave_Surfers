@@ -1,4 +1,4 @@
-.projects1 {
+/* .projects1 {
     display: block;
     margin-right: 5px ;
     cursor: pointer;
@@ -74,4 +74,53 @@
     -webkit-transition: all 0.1s ease-in;
     transition: all 0.1s ease-in;
     cursor: pointer;
+} */
+.mobile_nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding-top: 10vw;
+    padding-left: 4vw;
+    margin-right: 0px;
+}
+.close_button{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    margin-left: 75vw;
+    z-index: 2;
+}
+.projects1 {
+    position: absolute;
+    align-self: center;
+    top: 30%;
+    font-size: 5vw;
+    font-style: 'JetBrains Mono', monospace;
+    z-index: 2;
+}
+.blog1 {
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 37%;
+    z-index: 2;
+}
+.community1 {
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 51%;
+    z-index: 2;
+}
+.prog1 {
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 44%;
+    z-index: 2;
 }
