@@ -109,11 +109,12 @@ export default function Projects(){
 
     return(
         <div className="project-body">
-            <Navbar />
-            <h1>$ cd ~/ Projects/ KSP</h1>
-            
+                <Navbar />
+                <h1>$ cd ~/ Projects/ KSP</h1>
                 <Card />
-            <LineMenu />
+                <Card />
+                <Card />
+                <LineMenu />
         </div>
     );
 }
