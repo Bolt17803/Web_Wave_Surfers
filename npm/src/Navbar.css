@@ -2,7 +2,7 @@
     margin: 0px 0px 0px 0px;
     position: relative;
     display: flex;
-    padding-top: 5vw;
+    padding-top: 3vw;
     padding-bottom: 15px;
 }
 
@@ -15,6 +15,8 @@
     height: 4vw;
     width: 4vw;
     display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -63,7 +65,8 @@
     transition: all 0.1s ease-in;
     font-size: 2.3vw;
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 500
+    font-weight: 500;
+    z-index: 1;
 }
 
 .openlake:hover{
@@ -221,4 +224,177 @@
     .nav_buttons {
         display: none;
     }
+}
+
+/* mobile navbar */
+.mobile_nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding-top: 10vw;
+    padding-left: 4vw;
+    margin-right: 0px;
+}
+.close_button{
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    margin-left: 73vw;
+    z-index: 2;
+}
+.projects1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    align-self: center;
+    top: 32%;
+    font-size: 5vw;
+    font-style: 'JetBrains Mono', monospace;
+    z-index: 2;
+    display: block;
+    margin-right: 5px ;
+    cursor: pointer;
+    color: black;
+    text-shadow:0px 0px 1px #103278;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.projects1:hover{
+    background-color: #103278;
+    color: blanchedalmond;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #103278;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.blog1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 38%;
+    z-index: 2;
+    display: block;
+    margin-right: 5px ;
+    cursor: pointer;
+    color: black;
+    text-shadow:0px 0px 1px #047dae;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.blog1:hover{
+    background-color: #047dae;
+    color: blanchedalmond;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #047dae;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.community1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 50%;
+    z-index: 2;
+    display: block;
+    margin-right: 5px ;
+    cursor: pointer;
+    color: black;
+    /* text-shadow:0px 0px 1px #7dcbea; */
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.community1:hover{
+    background-color: #7dcbea;
+    color: blanchedalmond;
+    color: blanchedalmond;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #7dcbea;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.prog1 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    align-self: center;
+    font-size: 5vw;
+    top: 44%;
+    z-index: 2;
+    display: block;
+    margin-right: 5px ;
+    cursor: pointer;
+    color: black;
+    /* text-shadow:0px 0px 1px #0896cd; */
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.prog1:hover{
+    background-color: #32a6d4;
+    color: blanchedalmond;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #32a6d4;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.github1 {
+    color: black;
+    width: 7.5vw;
+    height: 7.5vw;
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+    left: 48%;
+}
+.github1:hover{
+    border-radius: 29px;
+    box-shadow: 0 0 10px black;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.linkedin1 {
+    color: black;
+    width: 7.5vw;
+    height: 7.5vw;
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+    left: 35%;
+}
+.linkedin1:hover{
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.instagram1 {
+    color: black;
+    width: 7.5vw;
+    height: 7.5vw;
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+    left: 60%;
+}
+.instagram1:hover{
+    border-radius: 2.3vw;
+    box-shadow: 0 0 10px black;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s, transform 0.2s;
 }

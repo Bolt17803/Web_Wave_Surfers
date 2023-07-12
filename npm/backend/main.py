@@ -2,7 +2,7 @@ from fastapi import FastAPI,Query
 from fastapi import FastAPI,File, Form
 from fastapi import UploadFile, File
 from pydantic import BaseModel
-from pymongo import MongoClient
+# from pymongo import MongoClient
 from typing import List
 from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
