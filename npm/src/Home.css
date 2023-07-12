@@ -17,7 +17,7 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   transition: all 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+   animation: floating ease 4s infinite;
 }
 
 .logo-image:hover{
@@ -31,6 +31,21 @@
     /* color: white; */
 }
 
+@keyframes floating {
+    0%{
+        transform: translate(-50%,-50%) ;
+    }
+     25%{
+        transform: translate(-49%,-48%) ;
+    }
+    50%{
+        transform: translate(-49%,-47%) ;
+    }
+    75%{
+        transform: translate(-48%,-47%) ;
+    }
+}
+
 /* .wires{
     width: 500px;
     height: 360px;
@@ -40,6 +55,7 @@
    position: absolute;
    top: -25%;
    left: -2%;
+    animation: rotating 4s ease-in-out;
 
 } 
 
@@ -47,6 +63,16 @@
     position: absolute;
     bottom: 0%;
     right: 0;
+}
+
+@keyframes rotating{
+    0%{
+        transform: rotate(5deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    
 }
 
 .text{
