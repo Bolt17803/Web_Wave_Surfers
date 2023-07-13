@@ -14,39 +14,29 @@
     width: 100%;
     height: 100%;
 }
-.background{
-    position: absolute;
-    top: 0px;
-    left: -26px;
-
-    width: 1920px;
-    height: 980px;
-
-    z-index: 0;
-}
 /* Command Prompt */
-.project-body > h1{
+.project-body > .project-cmd{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 20%;
     color: white;
     text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
-    z-index: 10;
+    z-index: 1;
 
     color: #FBF2F2;
     text-shadow: 0px 0px 5px #FDF7F7;
-    font-size: 2vw;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 /* project-card */
 .project-card{
-    position: relative;
-    top: 5%;
+    position: absolute;
+    top: 20vh;
     left: 35%;
     width: 56.7%;
-    height: 64%;
+    height: 64vh;
     flex-shrink: 0;
 
     border-radius: 15px;
@@ -131,6 +121,7 @@
     top: 15%;
     left: 2.5%;
     height: 440px;
+    transition: 0.1s;
 }
 .line{
     position: absolute;
@@ -227,84 +218,78 @@
     padding: 0px;  
     text-align: left;
 }
-/* 
-.item-holder .animation{
-	position: absolute;
-	border-radius: 15px;
-    background: linear-gradient(0deg, rgba(21, 41, 81, 0.20) 0%, rgba(21, 41, 81, 0.20) 100%), linear-gradient(173deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.10) 100%);
-    box-shadow: 0px 4px 50px 40px rgba(0, 0, 0, 0.23);
-    backdrop-filter: blur(25px);
-    z-index: 0;
-    width: 177px;
-    height: 53px;
-    flex-shrink: 0;
-}
-.item-holder .line-item .link:active{
-    color: white;
-    text-shadow: 0px 0px 2px #FDF7F7;
-}
-.item-holder .line-item:nth-child(7){
-    width: 100px;
-}
-@keyframes p1 {
-    100%{
-	left: -26px;
-    transform: translateY(100%);
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 1100px){
+    .menu{
+        left: -2vw;
+    }
+    .project-body > .project-cmd{
+        top: 12%;
     }
 }
-.item-holder .start-home, .line-item:nth-child(7):active~.animation{
+@media (max-width: 900px){
+    .project-body{
+        position: relative;
+        justify-content: center;
+        align-items: center;
 
-	width: 217px;
-    animation: p1 0.3s ease-in;
-} */
-/* .item-holder .line-item :nth-child(2){
-	width: 110px;
-}
-.item-holder .line-item:nth-child(2):active~.animation{
-	width: 190px;
-	left: -26px;
-    top: 13.9%;
-    animation-fill-mode: forwards;
-}
-.item-holder .line-item:nth-child(3){
-	width: 100px;
-}
-.item-holder .line-item:nth-child(3):active~.animation{
-	width: 230px;
-	left: -26px;
-    top: 29%;
-}
-.item-holder .line-item:nth-child(4){
-	width: 160px;
-}
-.item-holder .line-item:nth-child(4):active~.animation{
-    width: 160px;
-    left: -26px;
-    top: 43.5%;
-}
-.item-holder .line-item:nth-child(5){
-	width: 120px;
-}
-.item-holder .line-item:nth-child(5):active~.animation{
-	width: 265px;
-    left: -26px;
-    top: 58.242%;
+        height: 100vh;
+        width: 100vw;
+
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+
+        
+        overflow-y:scroll;
+        overflow-x:hidden;
+    }
+    .project-body > .project-cmd{
+        position: relative;
+        text-align: left;
+        left:10vw;
+        top: 5%;
+        font-size: 4vw;
+        margin-bottom: 30px;
+    }
+    .menu{
+        display: none;
+    }
+    .project-card{
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        top: 5%;
+        left: 7.5vw;
+        right: 10vw;
+        margin-bottom: 30px;
+        width: 80vw;
+        height: 50vh;
+    }
+    .project-card-title{
+        font-size: 5vw;
+        line-height: 100%;
+    }
+    .project-card-para{
+        font-size: 2vw;
+        line-height: 100%;
+    }
+    .project-card-btn{
+        width: 30vw;
+        left:5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .project-card-btn > a{
+        margin-left: .6vw;
+        font-size: 2.5vw;
+    }
+    .project-card-img{
+        height: 100%;
+    }
 }
 
-.item-holder .line-item:nth-child(6){
-	width: 120px;
-}
-.item-holder .line-item:nth-child(6):active~.animation{
-	width: 200px;
-    left: -26px;
-    top: 72.828%;
-}
-
-.item-holder .line-item:nth-child(7){
-	width: 120px;
-}
-.item-holder .line-item:nth-child(7):active~.animation{
-	width: 150px;
-    left: -26px;
-    top: 87.7142857143%;
-} */

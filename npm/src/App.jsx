@@ -10,6 +10,7 @@ import Community from './components/Community'
 import BlogdataProvider from './components/BlogdataProvider'
 import Projects from './components/Projects'
 import Programs from './components/Programs'
+import ProjectDisplay from './components/ProjectDisplay';
 
 function App() {
   const apikey="83951c0e1b35448c95fd7924393c9e9a";
@@ -23,6 +24,7 @@ function App() {
         {/* <Route exact path="/never" element={<Blogform />} /> */}
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/programs" element={<Programs />} />
+        <Route exact path="/pd" element={<ProjectDisplay />} />
         </Routes> 
       </BlogdataProvider>     
     </BrowserRouter>
