@@ -22,9 +22,9 @@ function App() {
         <Route exact path="/community" element={<Community />} />
         <Route exact path="/blog" element={<Blogs />} />
         {/* <Route exact path="/never" element={<Blogform />} /> */}
-        <Route exact path="/projects" element={<Projects />} />
+        <Route path="/projects/:projectId" element={<Projects />} />
+        <Route path="/projects/:projectId/detailed" element={<ProjectDisplay />} />
         <Route exact path="/programs" element={<Programs />} />
-        <Route exact path="/pd" element={<ProjectDisplay />} />
         </Routes> 
       </BlogdataProvider>     
     </BrowserRouter>

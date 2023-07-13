@@ -10,14 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sanity/client": "^6.1.7",
+    "@uiw/react-markdown-preview": "^4.1.13",
+    "@varandas/fetch-readme": "^1.0.10",
     "axios": "^1.4.0",
     "d3-ease": "^3.0.1",
     "framer-motion": "^10.12.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-drive-picker": "^1.2.2",
+    "react-icons": "^4.10.1",
+    "react-markdown": "^8.0.7",
     "react-move": "^6.5.0",
-    "react-router-dom": "^6.14.1"
+    "react-router-dom": "^6.14.1",
+    "remark-gfm": "^3.0.1",
+    "sanity": "^3.14.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
