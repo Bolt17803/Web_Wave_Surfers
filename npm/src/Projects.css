@@ -15,28 +15,28 @@
     height: 100%;
 }
 /* Command Prompt */
-.project-body > h1{
+.project-body > .project-cmd{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 20%;
     color: white;
     text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
-    z-index: 10;
+    z-index: 1;
 
     color: #FBF2F2;
     text-shadow: 0px 0px 5px #FDF7F7;
-    font-size: 2vw;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 /* project-card */
 .project-card{
-    position: relative;
-    top: 5%;
+    position: absolute;
+    top: 20vh;
     left: 35%;
     width: 56.7%;
-    height: 64%;
+    height: 64vh;
     flex-shrink: 0;
 
     border-radius: 15px;
@@ -121,6 +121,7 @@
     top: 15%;
     left: 2.5%;
     height: 440px;
+    transition: 0.1s;
 }
 .line{
     position: absolute;
@@ -219,7 +220,15 @@
 }
 
 /* MOBILE RESPONSIVE DESIGN */
-@media (max-width: 768px){
+@media (max-width: 1100px){
+    .menu{
+        left: -2vw;
+    }
+    .project-body > .project-cmd{
+        top: 12%;
+    }
+}
+@media (max-width: 900px){
     .project-body{
         position: relative;
         justify-content: center;
@@ -236,9 +245,11 @@
         overflow-y:scroll;
         overflow-x:hidden;
     }
-    .project-body > h1{
+    .project-body > .project-cmd{
         position: relative;
-        top: 10px;
+        text-align: left;
+        left:10vw;
+        top: 5%;
         font-size: 4vw;
         margin-bottom: 30px;
     }
