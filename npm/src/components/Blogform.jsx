@@ -20,18 +20,6 @@ const Blogform=({isVisible,onClick})=>{
     // const [formData, setFormData] = useState({});
     const [sheetData, setSheetData] = useState([]);
 
-    // const handleOpenPicker=()=>{
-    //     openPicker({
-    //         clientId: "",
-    //         developerKey: "",
-    //         viewId: "DOCS",
-    //         showUploadView: true,
-    //         showUploadFolders: true,
-    //         supportDrives: true,
-    //         multiselect:true
-    //     })
-    // }
-
     const contentChange = (event) => {
         setContent(event.target.files[0]);
       };

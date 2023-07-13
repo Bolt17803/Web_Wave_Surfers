@@ -6,14 +6,17 @@ import Blogform from './Blogform';
 import Footer from './Footer';
 import BlogsContext from '../contexts/blogContext'
 import PropTypes from 'prop-types'
- const Blogs=(props) =>{
+import createClient from "../client";
+
+
+ const Blogs=({props}) =>{
     const [articles, setArticles]=useState([])
     const [page, setPage]=useState(1)
     const [totalResults, setTotalResults]=useState(0)
     const [searchedTitle,setSearchedTitle]=useState('');
     const [isBoxVisible, setIsBoxVisible] = useState(false);
-    const {data} = useContext(BlogsContext);
     // const [contents, setContents] = useState([]);
+    const [blogs,SetBlogs]=useState(null)
     const handleInputChange = (event) => {
       setSearchedTitle(event.target.value.toLowerCase());
     };
@@ -49,39 +52,49 @@ import PropTypes from 'prop-types'
       console.log('hello world');
     };
     
-      const cap=props.category;
-      document.title=props.category;
+      // const cap=props.category;
+      // document.title=props.category;
 
-      const updateNews=async()=>{
-        console.log("cdm")
-        const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=83951c0e1b35448c95fd7924393c9e9a&page=${page}&pageSize=${props.pageSize}`;
-        let data = await fetch(url); //fetch API returns a promise 83951c0e1b35448c95fd7924393c9e9a
-        let parsedData= await data.json()
-        setArticles(parsedData.articles);
-        setTotalResults(parsedData.totalResults);
+    //   const updateNews=async()=>{
+    //     console.log("cdm")
+    //     const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=83951c0e1b35448c95fd7924393c9e9a&page=${page}&pageSize=${props.pageSize}`;
+    //     let data = await fetch(url); //fetch API returns a promise 83951c0e1b35448c95fd7924393c9e9a
+    //     let parsedData= await data.json()
+    //     setArticles(parsedData.articles);
+    //     setTotalResults(parsedData.totalResults);
 
-      }
+    //   }
 
-      useEffect(()=>{
-        updateNews();
-       },[])
+    //   useEffect(()=>{
+    //     updateNews();
+    //    },[])
 
-       const fetchMoreData = async() => {
-        console.log("cdm")
-        const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page+1}&pageSize=${props.pageSize+1}`;
-        setPage(page+1);
-        let data = await fetch(url); //fetch API returns a promise
-        let parsedData= await data.json()
-        setArticles(parsedData.articles);
-      setTotalResults(parsedData.totalResults);
-    };
+    //    const fetchMoreData = async() => {
+    //     console.log("cdm")
+    //     const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page+1}&pageSize=${props.pageSize+1}`;
+    //     setPage(page+1);
+    //     let data = await fetch(url); //fetch API returns a promise
+    //     let parsedData= await data.json()
+    //     setArticles(parsedData.articles);
+    //   setTotalResults(parsedData.totalResults);
+    // };
 
   /*Filter the blogs as per input given in input section*/
-    const filteredContents = articles.filter((content) =>
-    content.title.toLowerCase().includes(searchedTitle)
-  );
+    const filteredContents = blogs?blogs.filter((content) =>
+    content.metadesc.toLowerCase().includes(searchedTitle)
+  ):null
     
-  const displayedContents = searchedTitle ? filteredContents : articles;
+  const displayedContents = searchedTitle ? filteredContents : blogs;
+
+  useEffect(() => {
+	  createClient
+			.fetch(
+				`*[_type == "blog"]`
+			)
+			.then((data) => SetBlogs(data))
+			.catch(console.error);
+	}, []);
+
   return (
     
   <div className='blogContainer'>
@@ -112,10 +125,10 @@ import PropTypes from 'prop-types'
       <div  className={`cardContainer ${isBoxVisible ? 'blurred' : ''}`} onClick={handleBackgroundClick}>
         <h2>OUR BLOGS</h2>
         <div className="cards">
-            {displayedContents.map((element)=>{
-                    return <div className="card-design" key={element.url}>
-                    <Blogcard  title={element.Title?element.Title:""} tags={element.Tags?element.Tags.slice(0,88)+"....":""} />
-                    {/* imageUrl={element.urlToImage} */}
+            {displayedContents && displayedContents.map((blog)=>{
+                    return <div className="card-design" key={blog._id}>
+                    <Blogcard blog={blog}/>
+                    {/* imageUrl={element.urlToImage} tags={element.Tags?element.Tags.slice(0,88)+"....":""*/}
                     </div>
             })}
         </div>
@@ -127,6 +140,7 @@ import PropTypes from 'prop-types'
     
   );
 }
+  
 
 Blogs.defaultProps={
     country: "in",
@@ -140,3 +154,4 @@ Blogs.defaultProps={
   }
 
 export default Blogs
+
