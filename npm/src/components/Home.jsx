@@ -2,34 +2,29 @@ import React from "react";
 import '../Home.css'
 import Navbar from "./Navbar";
 import TypingEffect from "./TypingEffect";
-import {motion} from 'framer-motion'
 import wirelc from '../assets/Wire-left-corner.png';
 import wirerc from '../assets/Wire-right-corner.png';
 import logo from '../assets/openlake_logo.png';
+import Footer from "./Footer";
 
 export default function Home(){
     const textToAnimate = '<p>We are the open source community of IIT BHILAI</p> <p>Connecting students to the world of Open Source development</p>';
     return(
-            <motion.div className="homeContainer">
+            <div className="homeContainer">
                 <Navbar/>
             <div className="logo">
-                <img className="logo-image" src={logo} alt="Logo"/>
+                <img className="logo-image" src={logo} alt="Openlake-Logo"/>
             </div>
         <div className="wires-top">
-            <img src={wirelc} alt="wires"/>
+            <img src={wirelc} alt="design-wires"/>
         </div>
         <div className="wires-bottom">
-            <img src={wirerc} alt="wires"/>
+            <img src={wirerc} alt="design-wires"/>
         </div>
     <div className="text">
-        {/* <p>
-          <a href="" class="typewrite" data-period="2000" data-type='[ "We are the open source community of IIT BHILAI","Connecting students to the world of Open Source development"]'>
-           <span class="wrap"></span>
-            </a>
-        </p> */}
         <TypingEffect htmlContent={textToAnimate} />
     </div>
-        
-    </motion.div>
+    <div className="homeFooter"><Footer/></div>
+    </div>
     )
 }

@@ -4,8 +4,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    /* background: blue; */
-    background-image: url('assets/Home.png');
+    background-image: url('assets/projects_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,7 +13,7 @@
 
 .logo img{
    position: absolute;
-   top: 50%;
+   top: 47%;
    left: 50%;
    transform: translate(-50%, -50%);
    animation: floating ease 4s infinite;
@@ -22,13 +21,11 @@
 
 .logo-image:hover{
     border-radius: 100%;
-    /* border:6px solid #333; */
     background: rgba(92, 91, 166, 0.719);
 	box-shadow: 0px 0px 20px 0 rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     color: #fbfbf9;
     box-shadow:0px 0px 30px #f9f9f6;
-    /* color: white; */
 }
 
 @keyframes floating {
@@ -46,11 +43,6 @@
     }
 }
 
-/* .wires{
-    width: 500px;
-    height: 360px;
-} */
-
 .wires-top{
    position: absolute;
    top: -25%;
@@ -61,7 +53,7 @@
 
 .wires-bottom{
     position: absolute;
-    bottom: 0%;
+    bottom: -5%;
     right: 0;
 }
 
@@ -95,6 +87,12 @@
 
 }
 
+.homeFooter{
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+}
+
 @media (max-width:1230px){
     .logo img{
         top:35%;
@@ -114,19 +112,12 @@
 
 @media (max-width: 1026px) {
     .wires-top img{
-        width: 25vw;
-        height: auto;
+        width: 20vw;
     }
 
     .wires-bottom img{
         width: 17vw;
-        height: auto;
     }
-
-    /* .homeContainer{
-        width: 112vw;
-        height: 113vh;
-    } */
 
     .text{
         font-size: 1.7rem;
@@ -144,12 +135,21 @@
   @media (max-width:920px){
     .logo img{
         top:35%;
+        width: 25vw;
+        height: 25vw;
     }
 
     .text{
         top:65%;
         font-size: 1.5rem;
     }
+  }
+
+  @media (max-width:840px){
+    .wires-top img{
+        width: 30vw;
+    }
+
   }
 
 
@@ -159,33 +159,32 @@
     }
     .wires-bottom img{
         width:20vw;
-        height: auto;
     }
 
+  }
+
+  @media (max-width:725px){
+    .text{
+        font-size: 1.3rem;
+    }
   }
 
   @media (max-width:675px){
     .wires-bottom img{
         width:22vw;
-        height: auto;
     }
 
   }
 
-  @media (max-width:655px){
+  @media (max-width:670px){
     .text{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
-
-    /* .homeContainer{
-        width: 120vw;
-        height: 120vh;
-    } */
   }
 
   @media (max-width:615px){
     .text{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
   }
@@ -197,37 +196,33 @@
 
     .wires-bottom img{
         width:24vw;
-        height: auto;
     }
 
     .wires-top img{
         width: 26vw;
-        height: auto;
     }
 
   }
 
   @media (max-width:551px){
     .logo img{
-        width: 40vw;
-        height: 40vw;
+        width: 30vw;
+        height: 30vw;
     }
 
     .wires-bottom img{
         width:26vw;
-        height: auto;
     }
 
     .wires-top img{
         width: 28vw;
-        height: auto;
     }
   }
 
   @media (max-width:445px){
     .wires-top img{
         width: 38vw;
-        height: auto;
+        left: -3%;
     }
     .wires-bottom img{
         width:30vw;
@@ -238,7 +233,7 @@
   @media (max-width:367px){
     .wires-top img{
         width: 36vw;
-        height: auto;
+        left: -5% !important;
     }
 
     .logo img{
@@ -249,15 +244,24 @@
 
   @media (max-width:337px){
     .wires-top img{
-        width: 40vw;
-        height: auto;
+        width: 34vw;
+    }
+    .logo img{
+        width: 43vw;
+        height: 43vw;
+    }
+  }
+
+  @media (max-width:325px){
+    .wires-top img{
+        width: 39vw;
+        left: -8% !important;
     }
   }
 
 @media (max-width:306px){
     .wires-top img{
         width: 42vw;
-        height: auto;
     }
 
     .text{
