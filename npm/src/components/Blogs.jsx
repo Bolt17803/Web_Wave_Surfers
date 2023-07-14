@@ -57,22 +57,22 @@ import createClient from "../client";
     
   const displayedContents = searchedTitle ? filteredContents : blogs;
 
-  // useEffect(() => {
-	//   createClient
-	// 		.fetch(
-	// 			`*[_type == "blog"]`
-	// 		)
-	// 		.then((data) => SetBlogs(data))
-	// 		.catch(console.error);
-	// }, []);
-
   useEffect(() => {
-    fetch(
-      "https://api.github.com/repos/aswinisamantray/Web_Wave_Surfers/contents/Web_Wave_Surfers/npm/src/assets"
-    )
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
+	  createClient
+			.fetch(
+				`*[_type == "blog"]`
+			)
+			.then((data) => SetBlogs(data))
+			.catch(console.error);
+	}, []);
+
+  // useEffect(() => {
+  //   fetch(
+  //     "https://api.github.com/repos/aswinisamantray/Web_Wave_Surfers/contents/Web_Wave_Surfers/npm/src/assets"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
 
   return (
