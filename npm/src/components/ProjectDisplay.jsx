@@ -221,7 +221,7 @@ export default function ProjectDisplay(){
           className='disqus'
           shortname={disqusShortname}
           config={disqusConfig}
-        />
+      />
       </div>
     </div>
   );
