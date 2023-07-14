@@ -1,0 +1,171 @@
+.programs-body{
+    position: absolute;
+
+    background: url("./assets/Magic_Pattern.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+
+    border: 0px;
+    margin: 0px;
+    padding: 0px;  
+    
+    width: 100%;
+    height: 100%;
+}
+.programs-body > h1{
+    position: absolute;
+    top: 23%;
+    left: 20%;
+    color: white;
+    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    z-index: 10;
+
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px #FDF7F7;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.programs-body > h2{
+    position: relative;
+    top:10%;
+    height: 10%;
+    width:100%;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+
+    color: white;
+    text-shadow: 0px 0px 10px 0px rgba(253, 244, 244, 0.90);
+    z-index: 10;
+
+    color: #FBF2F2;
+    text-shadow: 0px 0px 5px #FDF7F7;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.flexi{
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 7%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.year-button{
+    position: relative;
+    width: 6%;
+    height: 3vw;
+    margin-left: 10px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    text-align:center;
+}
+.year-button-blend{
+    position: absolute;
+    background-color: #D9D9D9;
+    mix-blend-mode: color-burn;
+    width: 100%;
+    height: 100%;
+
+    align-content: center;
+    justify-content: center;
+}
+.year-button-blend:hover{
+    background-color: #b9b9b9;
+    mix-blend-mode: color-burn;
+}
+.year-button h1{/*need to optimize XD*/
+    margin-top: 8%;
+    margin-bottom: auto;
+    margin-left: 14%;
+    margin-right: auto;
+    line-height:100%;
+    vertical-align:middle;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-size: 2vw;
+}
+/* CARD */
+.programs-container{
+    position: relative;
+    top:15%;
+    width: 100vw;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.programs{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 80%;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 10px;
+
+}
+.programs > .card{
+    border: 0px;    
+    top: 0px;
+    left: 0px;
+    width: 30vw;
+    height: 20vw;
+}
+.programs > .card > h1{
+    position: absolute;
+    margin: 0px;
+    top: 7%;
+    left: 7%;
+
+    font-size: 2vw;
+}
+.programs > .card > h3{
+    position: absolute;
+    margin: 0px;
+    bottom: 5%;
+    left: 5%;
+    width: 50%;
+    text-align: center;
+    font-size: 0.7vw;
+}
+.programs > .card > .image{
+    position: relative;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+
+}
+.programs > .card > .image{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 30%;
+}
+.programs > .card > .img{
+    background-color: red;
+    display: none;
+}
