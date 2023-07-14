@@ -5,6 +5,7 @@ import TypingEffect from "./TypingEffect";
 import wirelc from '../assets/Wire-left-corner.png';
 import wirerc from '../assets/Wire-right-corner.png';
 import logo from '../assets/openlake_logo.png';
+import Footer from "./Footer";
 
 export default function Home(){
     const textToAnimate = '<p>We are the open source community of IIT BHILAI</p> <p>Connecting students to the world of Open Source development</p>';
@@ -23,7 +24,7 @@ export default function Home(){
     <div className="text">
         <TypingEffect htmlContent={textToAnimate} />
     </div>
-        
+    <div className="homeFooter"><Footer/></div>
     </div>
     )
 }
