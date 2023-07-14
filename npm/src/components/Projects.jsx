@@ -76,8 +76,8 @@ export default function Projects(){
                             <h3 className="project-card-title">{props.project}</h3>
                             <p className="project-card-para">{props.project} application aims to get the students acquainted with the courses, professors, evaluation schemes. The said things can be achieved via gathering course feedback, professor feedback, and previous year grading schemes. This can be done by making a portal (just like a blog site) where people can share their honest reviews without being scrutinized much.</p>
                             <div className="button-group">
-                            <a className='project-sc-a' href={`https://github.com/OpenLake/${projectRepo[projects.findIndex((id)=>(id===props.project))]}`}><button className='project-card-btn' key={props.project+' btn'} type="button">VIEW SOURCE CODE</button></a>
-                            <a className='project-details-a' href={`/projects/${projectRepo[projects.findIndex((id)=>(id===props.project))]}/detailed`}><button className='project-details-btn' key={props.project+' btn'} type="button">READ MORE</button></a>
+                            <a className='project-sc-a' href={`https://github.com/OpenLake/${projectRepo[projects.findIndex((id)=>(id===props.project))]}`}><button className='project-card-btn' key={props.project+' btn'} type="button"><p className="btn-text">VIEW SOURCE CODE</p></button></a>
+                            <a className='project-details-a' href={`/projects/${projectRepo[projects.findIndex((id)=>(id===props.project))]}/detailed`}><button className='project-details-btn' key={props.project+' btn'} type="button"><p className="btn-text">READ MORE</p></button></a>
                                 {/* onClick={()=>{navigate(`/projects/${projectRepo[projects.findIndex((id)=>(id===props.project))]}/detailed`)}} */}
                             </div>
                         </div>
