@@ -20,7 +20,7 @@ export default function Navbar(){
         <div className="nav_buttons">
           <Link to="/projects/Activity-Tracker" className="projects">Projects</Link>
           <Link to="https://opensarasu-blogs.vercel.app/" className="blog">Blog</Link>
-          <Link to="/programs" className="prog">Programs</Link>
+          {/* <Link to="/programs" className="prog">Programs</Link> */}
           <Link to="/community" className="community">Community</Link>
         </div>
         <div className="hamburger">
@@ -31,7 +31,7 @@ export default function Navbar(){
         <bsIcons.BsXSquare className='close_button' onClick={() => {setIsMenuOpen(!isMenuOpen)}} />
         <Link to="/projects/Activity-Tracker" className="projects1">Projects</Link>
         <Link to="https://opensarasu-blogs.vercel.app/" className="blog1">Blog</Link>
-        <Link to="/programs" className="prog1">Programs</Link>
+        {/* <Link to="/programs" className="prog1">Programs</Link> */}
         <Link to="/community" className="community1">Community</Link>
         <a gref="https://www.linkedin.com/company/openlake/?originalSubdomain=in" > <imIcons.ImLinkedin className="linkedin1" /> </a>
         <a href="https://github.com/OpenLake" > <bsIcons.BsGithub className="github1" /> </a>
