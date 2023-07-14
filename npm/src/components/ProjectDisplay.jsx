@@ -1,8 +1,8 @@
 
 import MarkdownPreview from '@uiw/react-markdown-preview';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchReadme } from '@varandas/fetch-readme'; 
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import axios from 'axios';
@@ -24,7 +24,18 @@ const images = [
   'https://images.unsplash.com/photo-1659039288596-45cf0fbaee51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
   'https://images.unsplash.com/photo-1658730335794-c5edd544ccbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 ]
+/* CODE FOR MAINTAINERS:
+const regex = /- 👤 \*\*(.*)\*\* \[@(.*)\]\((.*)\)/g;
+    const maintainers = [];
+    let match;
 
+    while ((match = regex.exec(readmeFile)) !== null) {
+      const [, name, username, githubLink] = match;
+      maintainers.push({ name, username, githubLink });
+    }
+
+    console.log(maintainers);
+*/
 const variants = {
   initial: direction => {
     return {
@@ -57,11 +68,26 @@ const variants = {
   },
 }
 
-
+function ContributorCard(contributor){
+  return(
+    <a href={contributor.url}>
+      <div className='contributor-card' onClick={()=>navigate(`https://api.github.com/users/${contributor.login}`)}>
+        <img src={contributor.profilePic}></img>
+        <h1>{contributor.name}</h1>
+      </div>
+    </a>
+  );
+}
 function MarkdownToHtml(text){
   return(
     <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
   )
+}
+
+const fetchData = () => {
+  return fetch(`https://api.github.com/users/${githubUser}`)
+    .then((response) => response.json())
+    .then((data) => setGithubData(data));
 }
 
 export default function ProjectDisplay(){
@@ -74,6 +100,8 @@ export default function ProjectDisplay(){
   const [readme, setReadme] = useState(null);
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(0)
+  const [contributors, setContributors] = useState([]);
+  //const [repoName, setRepoName]  = useState(params.projectId);
 
   function nextStep() {
     setDirection(1)
@@ -99,7 +127,36 @@ export default function ProjectDisplay(){
     identifier: `${params.projectId}`,
     title: `${params.projectId}`
   }
+  
+  useEffect(() => {
+    const fetchContributors = async () => {
+      try {
+        const response = await axios.get(`https://api.github.com/repos/OpenLake/${params.projectId}/contributors`);
+        const data = response.data;
 
+        const contributorsData = await Promise.all(
+          data.map(async contributor => {
+            const contributorResponse = await axios.get(`https://api.github.com/users/${contributor.login}`);
+            const contributorData = contributorResponse.data;
+            return {
+              username: contributor.login,
+              name: contributorData.name || 'N/A',
+              profilePic: contributorData.avatar_url,
+              url:`https://github.com/${contributor.login}`
+            };
+          })
+        );
+
+        setContributors(contributorsData);
+      } catch (error) {
+        console.error('Error fetching contributors:', error);
+      }
+    };
+
+    fetchContributors();
+  }, []);
+
+  console.log(contributors)
   const fetchRepoInfo = async () => {
     try {
       const response = await axios.get(`https://api.github.com/repos/${repoLink}`);
@@ -119,7 +176,7 @@ export default function ProjectDisplay(){
     })
     readmeFile=readmeFile.replace(/\.\//g,`https://raw.githubusercontent.com/OpenLake/${params.projectId}/master/`) //For those markdowns which use local directory format for linking images
     setReadme(readmeFile);
-    console.log((readmeFile)); 
+    console.log(readme);
   })()
 
   return (
@@ -152,6 +209,10 @@ export default function ProjectDisplay(){
           </div>
           <div className="mdf">
               <MarkdownPreview  className="ffs" source={readme} />
+          </div>
+          <h1 className='contributors-heading'>Contributors</h1>
+          <div className='contributor-section'>
+            {contributors.map(contributor => <ContributorCard name={contributor.name} profilePic={contributor.profilePic} url={contributor.url}/>)}
           </div>
         </div>
       </div>

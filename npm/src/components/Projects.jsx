@@ -9,10 +9,9 @@ import {motion, AnimatePresence, easeInOut} from "framer-motion";
 import ProjectDisplay from "./ProjectDisplay";
 
 export default function Projects(){
-
     const navigate = useNavigate();
     const params = useParams();
-    
+
     console.log('p',(params.projectId)) 
     var projects = ['ACTIVITY TRACKER','CANON FORCES','LEADERBOARD PRO','KSP','HOMEWORK SCHEDULER','PHOTO SHARING','CGPA'];
     var projectRepo = ['Activity-Tracker','canonforces','Leaderboard-Pro','Knowledge-Sharing-Platform','Homework-Scheduler ','Photo-Sharing-App','iitbh-cgpa']
@@ -48,7 +47,7 @@ export default function Projects(){
     
     const Card = ()=>{
         return(
-            <div className="project-card" onClick={()=>{navigate(`/projects/${params.projectId}/detailed`)}}>
+            <div className="project-card" onClick={()=>{navigate(`/projects/${projectRepo[projects.findIndex((id)=>(id===project))]}/detailed`)}}>
             <AnimatePresence>
                 <motion.div
                     key={project}
@@ -76,6 +75,7 @@ export default function Projects(){
                     onClick={()=>{
                         setCardGoLeft((projects.findIndex((id)=>(id===project))) > (projects.findIndex((id)=>(id===props.name))));
                         setProject(props.name);
+                        navigate(`/projects/${projectRepo[projects.findIndex((id)=>(id===props.name))]}`)
                         }}>
                     <div className="circle">
                         <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>

@@ -18,7 +18,7 @@ export default function Navbar(){
             <Link to="/" className="openlake">OpenLake</Link>
         </div>
         <div className="nav_buttons">
-          <Link to="/projects" className="projects">Projects</Link>
+          <Link to="/projects/Activity-Tracker" className="projects">Projects</Link>
           <Link to="/blog" className="blog">Blog</Link>
           <Link to="/programs" className="prog">Programs</Link>
           <Link to="/community" className="community">Community</Link>
@@ -29,7 +29,7 @@ export default function Navbar(){
       </div>
       { isMenuOpen && <div className="mobile_nav">
         <bsIcons.BsXSquare className='close_button' onClick={() => {setIsMenuOpen(!isMenuOpen)}} />
-        <Link to="/projects" className="projects1">Projects</Link>
+        <Link to="/projects/Activity-Tracker" className="projects1">Projects</Link>
         <Link to="/blog" className="blog1">Blog</Link>
         <Link to="/programs" className="prog1">Programs</Link>
         <Link to="/community" className="community1">Community</Link>
