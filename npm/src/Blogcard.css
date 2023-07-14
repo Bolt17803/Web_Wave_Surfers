@@ -14,6 +14,7 @@
 }
 
 .navigate{
+    display: inline-block;
     border-radius: 20px;
  background: linear-gradient(180deg, #FFF 0%, rgba(0, 85, 184, 0.00) 99.99%, rgba(255, 17, 17, 0.00) 100%);
  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -38,12 +39,8 @@
 }
 
 .card-title{
-    /* position: absolute; */
     text-align: center;
-    /* border: 2px solid black; */
     height: 6vw;
-    /* top: 0; */
-    /* padding: 12px 0px; */
     overflow: hidden;
 }
 
@@ -51,17 +48,14 @@
     width: 20vw;
     height: 12vw;
     border-radius: 15px;
-    /* border: 2px solid black; */
 }
 
 .card-image{
-    /* border: 2px solid black; */
     width: 20vw;
     height: 13vw;
 }
 
 .description{
-    /* border: 2px solid black; */
     height: 7vw;
     overflow: hidden;
 }

@@ -4,8 +4,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    /* background: blue; */
-    background-image: url('assets/Home.png');
+    background-image: url('assets/projects_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,13 +21,11 @@
 
 .logo-image:hover{
     border-radius: 100%;
-    /* border:6px solid #333; */
     background: rgba(92, 91, 166, 0.719);
 	box-shadow: 0px 0px 20px 0 rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     color: #fbfbf9;
     box-shadow:0px 0px 30px #f9f9f6;
-    /* color: white; */
 }
 
 @keyframes floating {
@@ -45,11 +42,6 @@
         transform: translate(-48%,-47%) ;
     }
 }
-
-/* .wires{
-    width: 500px;
-    height: 360px;
-} */
 
 .wires-top{
    position: absolute;
@@ -115,18 +107,11 @@
 @media (max-width: 1026px) {
     .wires-top img{
         width: 25vw;
-        height: auto;
     }
 
     .wires-bottom img{
         width: 17vw;
-        height: auto;
     }
-
-    /* .homeContainer{
-        width: 112vw;
-        height: 113vh;
-    } */
 
     .text{
         font-size: 1.7rem;
@@ -159,7 +144,6 @@
     }
     .wires-bottom img{
         width:20vw;
-        height: auto;
     }
 
   }
@@ -167,7 +151,6 @@
   @media (max-width:675px){
     .wires-bottom img{
         width:22vw;
-        height: auto;
     }
 
   }
@@ -176,11 +159,6 @@
     .text{
         font-size: 1.3rem;
     }
-
-    /* .homeContainer{
-        width: 120vw;
-        height: 120vh;
-    } */
   }
 
   @media (max-width:615px){
@@ -197,12 +175,10 @@
 
     .wires-bottom img{
         width:24vw;
-        height: auto;
     }
 
     .wires-top img{
         width: 26vw;
-        height: auto;
     }
 
   }
@@ -215,19 +191,17 @@
 
     .wires-bottom img{
         width:26vw;
-        height: auto;
     }
 
     .wires-top img{
         width: 28vw;
-        height: auto;
     }
   }
 
   @media (max-width:445px){
     .wires-top img{
         width: 38vw;
-        height: auto;
+        left: -3%;
     }
     .wires-bottom img{
         width:30vw;
@@ -238,7 +212,6 @@
   @media (max-width:367px){
     .wires-top img{
         width: 36vw;
-        height: auto;
     }
 
     .logo img{
@@ -250,14 +223,12 @@
   @media (max-width:337px){
     .wires-top img{
         width: 40vw;
-        height: auto;
     }
   }
 
 @media (max-width:306px){
     .wires-top img{
         width: 42vw;
-        height: auto;
     }
 
     .text{

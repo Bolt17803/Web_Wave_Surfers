@@ -7,7 +7,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
@@ -37,12 +36,7 @@
 }
 
 .upload-file{
-        /* position: absolute; */
-        /* display: flex;  */
-        /* justify-content: center;
-        align-items: center; */
         text-align: center !important;
-        /* margin-bottom: 20px; */
         font-size: 1.2rem;
         font-weight: 600;
         top: 0;
@@ -50,7 +44,6 @@
 
 .uploadLabel{
         width: 21vw;
-        /* min-height: 100px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -91,7 +84,6 @@
 
 
 #uploadButton button{
-        /* left: 2%; */
         background: rgb(0, 157, 255);
 }
 
@@ -145,7 +137,6 @@
 }
 
 .blog-content label{
-        /* position: absolute; */
         top: 50%;
 }
 
@@ -713,14 +704,6 @@
         margin: 0;
 }
 
-/* .wrapper{
-       
-        padding: 20px;
-        width: 100vw;
-        min-height: 100vh;
-        background: burlywood;
-} */
-
 .right span{
         background:rgb(0, 157, 255) ;
         color: white;
@@ -752,21 +735,4 @@
         font-weight: 700;
         color: azure;
 }
-
-/* 
-.showfilebox{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px 0;
-        padding: 10px 15px;
-        box-shadow: rgb(57, 56, 56) 0px 0px 0px 1px,rgb(117, 112, 112) 0px 0px 0px 1px inset;
-} */
-
-/* .showfilebox .left{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-} */
 

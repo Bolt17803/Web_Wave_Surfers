@@ -1,23 +1,13 @@
-import React,{useContext, useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react'
 import '../Blogform.css'
-import Blogcard from './Blogcard';
 import X from '../assets/x-mark.png'
-import axios from 'axios';
-import Blogs from './Blogs';
-import BlogdataProvider from './BlogdataProvider'
-// import blogContext from '../contexts/blogContext';
-import DrivePicker from 'react-google-drive-picker'
 
 const Blogform=({isVisible,onClick})=>{
-    // const [content, setContent] = useState([]);
-    // const [image, setImage] = useState([]);
     const [uploaded, setUploaded] = useState(false);
     const [image, setImage] = useState(null);
     const [content,setContent] = useState(null);
     const [title, setTitle] = useState('');
     const [tags, setTag] = useState('');
-    const [openPicker,data,authResponse]= DrivePicker()
-    // const [formData, setFormData] = useState({});
     const [sheetData, setSheetData] = useState([]);
 
     const contentChange = (event) => {
@@ -73,12 +63,6 @@ const Blogform=({isVisible,onClick})=>{
             console.log('sheetData:', sheetData);
             }
         }, [sheetData]);
-
-        // const formData={
-        //     title:`${title}`,
-        //     tags:`${tags}`,
-        // };
-
     
     return(
             <div style={{display: isVisible ? 'flex' : 'none'}} className="box">
@@ -102,11 +86,6 @@ const Blogform=({isVisible,onClick})=>{
                     <div className="selected-files">
                            {image && image.name.slice(0,34)+'...'}
                      </div>
-
-                    {/* <div className="blog-content">
-                        <label htmlFor="">Content</label>
-                        <textarea name="content" id="content" onChange={contentChange} placeholder='<Write your content...../>'></textarea>
-                    </div> */}
 
                      <div className="blog-title">
                         <label htmlFor="">Title</label>
