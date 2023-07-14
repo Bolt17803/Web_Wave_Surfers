@@ -1,17 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
 import '../Projects.css';
 import Navbar from './Navbar.jsx';
 import bg from '../assets/projects_bg.png';
 import images from './Images';
 import {motion, AnimatePresence, easeInOut} from "framer-motion";
+import ProjectDisplay from "./ProjectDisplay";
 
 export default function Projects(){
-    var projects = ['ACTIVITY TRACKER','CANON FORCE','LEADERBOARD PRO','KSP','HOMEWORK SCHEDULER','PHOTO SHARING','CGPA'];
-    
-    const [project, setProject] = useState(projects[0]);
-    const [cardGoLeft, setCardGoLeft] = useState(false);
+    const navigate = useNavigate();
+    const params = useParams();
 
+    console.log('p',(params.projectId)) 
+    var projects = ['ACTIVITY TRACKER','CANON FORCES','LEADERBOARD PRO','KSP','HOMEWORK SCHEDULER','PHOTO SHARING','CGPA'];
+    var projectRepo = ['Activity-Tracker','canonforces','Leaderboard-Pro','Knowledge-Sharing-Platform','Homework-Scheduler ','Photo-Sharing-App','iitbh-cgpa']
+    const [project, setProject] = useState((params.projectId == null)?(projects[0]):(projects[projectRepo.findIndex((id)=>(id===params.projectId))]));
+    const [cardGoLeft, setCardGoLeft] = useState(false);
+    
     
     var cardVariants = {
         initial:(cardGoLeft)=>{
@@ -41,7 +47,7 @@ export default function Projects(){
     
     const Card = ()=>{
         return(
-            <div className="project-card">
+            <div className="project-card" onClick={()=>{navigate(`/projects/${projectRepo[projects.findIndex((id)=>(id===project))]}/detailed`)}}>
             <AnimatePresence>
                 <motion.div
                     key={project}
@@ -69,6 +75,7 @@ export default function Projects(){
                     onClick={()=>{
                         setCardGoLeft((projects.findIndex((id)=>(id===project))) > (projects.findIndex((id)=>(id===props.name))));
                         setProject(props.name);
+                        navigate(`/projects/${projectRepo[projects.findIndex((id)=>(id===props.name))]}`)
                         }}>
                     <div className="circle">
                         <div className="inner-circle" style={{display: (props.name==project) ? "block" : "none"}}></div>
@@ -106,7 +113,7 @@ export default function Projects(){
             </div>
         );
     };
-
+    
     return(
         <div className="project-body">
                 <Navbar />
