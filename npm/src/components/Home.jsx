@@ -13,13 +13,13 @@ export default function Home(){
             <div className="homeContainer">
                 <Navbar/>
             <div className="logo">
-                <img className="logo-image" src={logo} alt="Logo"/>
+                <img className="logo-image" src={logo} alt="Openlake-Logo"/>
             </div>
         <div className="wires-top">
-            <img src={wirelc} alt="wires"/>
+            <img src={wirelc} alt="design-wires"/>
         </div>
         <div className="wires-bottom">
-            <img src={wirerc} alt="wires"/>
+            <img src={wirerc} alt="design-wires"/>
         </div>
     <div className="text">
         <TypingEffect htmlContent={textToAnimate} />
