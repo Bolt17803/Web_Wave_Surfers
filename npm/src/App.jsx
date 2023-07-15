@@ -5,6 +5,7 @@ import Community from './components/Community'
 import Projects from './components/Projects'
 import Programs from './components/Programs'
 import ProjectDisplay from './components/ProjectDisplay';
+import Programs_new from './components/Programs_new'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route exact path="/community" element={<Community />} />
         <Route path="/projects/:projectId" element={<Projects />} />
         <Route path="/projects/:projectId/detailed" element={<ProjectDisplay />} />
-        <Route exact path="/programs" element={<Programs />} />
+        <Route exact path="/programs" element={<Programs_new />} />
         </Routes> 
     </BrowserRouter>
   )
