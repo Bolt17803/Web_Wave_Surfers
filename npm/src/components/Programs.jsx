@@ -22,7 +22,6 @@ export default function Programs(){
             <div className="card">
                 <h1>{props.name}</h1>
                 <p>{props.description?props.description:''}</p>
-                <h3>CLICK TO KNOW MORE</h3>
                 <div className="image">
                     <img className="img" src={props.image}></img>
                 </div>
@@ -43,7 +42,7 @@ export default function Programs(){
             </div>
             <div className="programs-container">
                 <div className="programs">
-                    <Card name={"Foss Overflow :"} image={fo_logo}/>
+                    <Card name={"Foss Overflow :"} image={fo_logo} />
                     <Card name={"React Bootcamp :"} image={react_logo}/>
                 </div>
             </div>
