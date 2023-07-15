@@ -29,18 +29,8 @@ export default function Navbar(){
       </div>
       { isMenuOpen && <div className="mobile_nav">
         <bsIcons.BsXSquare className='close_button' onClick={() => {setIsMenuOpen(!isMenuOpen)}} />
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Link to="/projects/Activity-Tracker" className="projects1">Projects</Link>
         <Link to="https://opensarasu-blogs.vercel.app/" className="blog1">Blog</Link>
-=======
-        <Link to="/projects" className="projects1">Projects</Link>
-        <Link to="/blog" className="blog1">Blog</Link>
->>>>>>> 6d7dd99 (completed navbar for mobile)
-=======
-        <Link to="/projects" className="projects1">Projects</Link>
-        <Link to="/blog" className="blog1">Blog</Link>
->>>>>>> 6d7dd99 (completed navbar for mobile)
         <Link to="/programs" className="prog1">Programs</Link>
         <Link to="/community" className="community1">Community</Link>
         <a gref="https://www.linkedin.com/company/openlake/?originalSubdomain=in" > <imIcons.ImLinkedin className="linkedin1" /> </a>
