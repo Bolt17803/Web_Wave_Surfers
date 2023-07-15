@@ -28,6 +28,8 @@
     box-shadow:0px 0px 30px #f9f9f6;
 }
 
+/*Floating animation for logo*/
+
 @keyframes floating {
     0%{
         transform: translate(-50%,-50%) ;
@@ -57,6 +59,7 @@
     right: 0;
 }
 
+/*Initial rotating animation for top corner wire*/
 @keyframes rotating{
     0%{
         transform: rotate(5deg);
@@ -93,6 +96,8 @@
     width: 100vw;
 }
 
+/*Media Query For Responsiveness*/
+
 @media (max-width:1230px){
     .logo img{
         top:35%;
@@ -122,6 +127,7 @@
     .text{
         font-size: 1.7rem;
         font-family:monospace;
+        font-weight:bold;
     }
     
   }
@@ -254,8 +260,11 @@
 
   @media (max-width:325px){
     .wires-top img{
-        width: 39vw;
+        width: 35vw;
         left: -8% !important;
+    }
+    .text{
+        line-height: 14px;
     }
   }
 
@@ -273,6 +282,23 @@
     .logo img{
         width: 47vw;
         height: 45vw;
+    }
+}
+
+@media (max-width:170px){
+    .logo img{
+        width: 24vw;
+        height: 24vw;
+        top: 30%;
+    }
+
+    .wires-top img,.wires-bottom img{
+        width: 25vw;
+    }
+    .text{
+        font-size: 0.4rem;
+        line-height: 5px;
+        top: 70%;        
     }
 }
 

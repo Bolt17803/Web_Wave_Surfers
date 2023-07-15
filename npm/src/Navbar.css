@@ -241,7 +241,7 @@
     padding-right: 1vw;
     position: absolute;
     align-self: center;
-    top: 32%;
+    top: 40%;
     font-size: 5vw;
     font-style: 'JetBrains Mono', monospace;
     z-index: 2;
@@ -269,7 +269,7 @@
     position: absolute;
     align-self: center;
     font-size: 5vw;
-    top: 38%;
+    top: 45%;
     z-index: 2;
     display: block;
     margin-right: 5px ;

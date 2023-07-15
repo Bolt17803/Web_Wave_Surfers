@@ -2,9 +2,9 @@ import React from "react";
 import '../Home.css'
 import Navbar from "./Navbar";
 import TypingEffect from "./TypingEffect";
-import wirelc from '../assets/Wire-left-corner.png';
-import wirerc from '../assets/Wire-right-corner.png';
-import logo from '../assets/openlake_logo.png';
+import wirelc from '../assets/Wire-left-corner.webp';
+import wirerc from '../assets/Wire-right-corner.webp';
+import logo from '../assets/openlake_logo.webp';
 import Footer from "./Footer";
 
 export default function Home(){
